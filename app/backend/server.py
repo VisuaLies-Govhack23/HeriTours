@@ -17,6 +17,14 @@ async def index():
     return FileResponse(INDEX_FILE)
 
 
+@Server.get("/dashboard/{dashboard_id}")
+async def dashboard(dashboard_id: str):
+    return HTMLResponse(f'''<!DOCTYPE html>
+        <title>Blah</title>
+        <h1>Dashboard!</h1>
+        You requested dashboard: {dashboard_id}
+    ''')
+
 @Server.get("/api/ping")
 async def ping():
     return JSONResponse({"pong": True})

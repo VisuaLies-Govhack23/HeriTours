@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import { dark, light } from 'frontend/constants';
-
-// TODO finish this
 
 const OverlayContainer = styled.div`
     height: 100vh;
@@ -23,6 +21,7 @@ const Blur = styled.div<{ visible: boolean }>`
     position: absolute;
     background-color: ${dark};
     opacity: ${props => (props.visible ? '0.3' : '0')};
+    transition: opacity 0.3s linear;
     z-index: 1000;
     overflow-x: clip;
     overflow-y: clip;
@@ -30,20 +29,27 @@ const Blur = styled.div<{ visible: boolean }>`
 `;
 
 const Overlay = styled.div<{ visible: boolean }>`
-    height: 100vh;
-    width: 80vw;
-    right: ${props => (props.visible ? '0rem' : '-80vw')};
-    transition: right 0.3s ease-in-out;
-    top: 0;
+    height: calc(100vh - 2rem);
+    width: calc(100vw - 2rem);
+    top: ${props => (props.visible ? '1rem' : '100vh')};
+    transition: top 0.3s ease-in-out;
+    left: 1rem;
     position: absolute;
     background-color: ${light};
     z-index: 2000;
     pointer-events: initial;
 `;
 
-{
-    /* <OverlayContainer>
-<Blur visible={isShowingDetails} />
-<Overlay visible={isShowingDetails}>Hello!</Overlay>
-</OverlayContainer> */
+interface ModalProps {
+    visible: boolean;
+    children: React.ReactNode;
 }
+
+export const Modal: React.FC<ModalProps> = ({ visible, children }) => {
+    return (
+        <OverlayContainer>
+            <Blur visible={visible} />
+            <Overlay visible={visible}>{children}</Overlay>
+        </OverlayContainer>
+    );
+};

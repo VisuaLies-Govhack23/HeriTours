@@ -2,7 +2,8 @@ import { create } from 'zustand';
 
 export enum Page {
     home = 'home',
-    map = 'map'
+    map = 'map',
+    details = 'details'
 }
 
 interface AppState {
@@ -10,7 +11,7 @@ interface AppState {
 }
 
 export const useAppStore = create<AppState>(() => ({
-    page: Page.home
+    page: Page.map
 }));
 
 export const search = (query: string) => {

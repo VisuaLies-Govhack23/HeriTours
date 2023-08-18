@@ -1,4 +1,5 @@
 import React from 'react';
+import Details from './components/Details';
 import Home from './components/Home';
 import TourMap from './components/TourMap';
 import { Page, useAppStore } from './model';
@@ -14,6 +15,8 @@ const App: React.FC<AppProps> = ({}) => {
             return <Home />;
         case Page.map:
             return <TourMap />;
+        case Page.details:
+            return <Details onClose={() => console.error('nothing to close')} />;
     }
 };
 
