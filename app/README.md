@@ -9,3 +9,10 @@ pip install -r requirements.txt
 
 npm install
 ```
+
+Run in development mode:
+
+```
+npm run build-watch &
+npm run serve-watch
+```
