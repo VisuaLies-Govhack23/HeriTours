@@ -11,5 +11,6 @@ module.exports = {
         project: true,
         tsconfigRootDir: __dirname
     },
+    rules: { 'no-empty-pattern': 0 },
     root: true
 };
