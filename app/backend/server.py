@@ -19,11 +19,26 @@ async def index():
 
 @Server.get("/dashboard/{dashboard_id}")
 async def dashboard(dashboard_id: str):
-    return HTMLResponse(f'''<!DOCTYPE html>
+    return HTMLResponse(
+        f"""<!DOCTYPE html>
         <title>Blah</title>
         <h1>Dashboard!</h1>
         You requested dashboard: {dashboard_id}
-    ''')
+    """
+    )
+
+
+@Server.get("/nearest/{lat}/{lon}")
+async def nearest(lat: float, lon: float):
+    print("requesting nearest to", lat, lon)
+    return JSONResponse({"info": "Test", "id": 123})
+
+
+@Server.get("/tour/{query}")
+async def nearest(query: str):
+    print("generating tour for", query)
+    return JSONResponse({"stops": []})
+
 
 @Server.get("/api/ping")
 async def ping():
