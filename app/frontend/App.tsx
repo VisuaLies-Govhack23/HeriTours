@@ -7,7 +7,7 @@ import { Page, useAppStore } from './model';
 export interface AppProps {}
 
 const App: React.FC<AppProps> = ({}) => {
-    const page = useAppStore().page;
+    const page = useAppStore(state => state.page);
 
     // A quick-and-dirty router
     switch (page) {
