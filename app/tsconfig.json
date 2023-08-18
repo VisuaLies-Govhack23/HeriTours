@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "ES2017",
+        "moduleResolution": "Node",
+        "baseUrl": ".",
+        "jsx": "react",
+        "strict": true,
+        "esModuleInterop": true,
+        "outDir": "./dist",
+        "skipLibCheck": true,
+        "noUncheckedIndexedAccess": true
+    }
+}

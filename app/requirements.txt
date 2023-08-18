@@ -1,0 +1,7 @@
+black
+fastapi
+isort
+pydantic
+pyright
+python-dotenv
+uvicorn[standard]

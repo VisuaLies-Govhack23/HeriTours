@@ -1,0 +1,12 @@
+# Build outputs
+/dist
+
+# Vendored dependencies
+/env
+/node_modules
+
+# Cache and temporaries
+__pycache__
+
+# Private files
+/.env
