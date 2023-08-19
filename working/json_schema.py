@@ -5,25 +5,64 @@ import pandas as pd
 import numpy as np
 import geopandas as gpd
 
-sal = gpd.read_file('SAL_2021_AUST_GDA2020_SHP/SAL_2021_AUST_GDA2020.shp')
-sal.geometry = sal.geometry.to_crs('epsg:4326')
+if __name__ == "__main__":
 
-heritage_data_gdf = gpd.read_file('govhack/Heritage_HistoricHeritageSites/HistoricHeritageSites.shp')
-heritage_data_gdf.geometry = heritage_data_gdf.geometry.to_crs('epsg:4326')
+    # ABS LGA layer
+    lga = gpd.read_file(
+        "data/LGA_2021_AUST_GDA2020_SHP/LGA_2021_AUST_GDA2020.shp"
+    ).drop("geometry", axis=1)
+    lga["LGA"] = lga.LGA_NAME21.apply(lambda x: x.upper())
 
-heritage_data_gdf['longitude'] = heritage_data_gdf.geometry.x
-heritage_data_gdf['latitude'] = heritage_data_gdf.geometry.y
+    # manual fixes for the LGA names in the heritage centroids file
+    concordance = {
+        "ALBURY CITY": "ALBURY",
+        "BAYSIDE": "BAYSIDE (NSW)",
+        "CAMPBELLTOWN": "CAMPBELLTOWN (NSW)",
+        "CENTRAL COAST": "CENTRAL COAST (NSW)",
+        "CITY OF PARRAMATTA": "PARRAMATTA",
+        "LEICHARDT": "INNER WEST",
+        "LITHGOW CITY": "LITHGOW",
+        "Queanbeyan-Palerang Regional": "QUEANBEYAN-PALERANG REGIONAL",
+        "UPPER HUNTER": "UPPER HUNTER SHIRE",
+        "WARRUMBUNGLE": "WARRUMBUNGLE SHIRE",
+    }
 
-heritage_data_gdf['lat_long'] = heritage_data_gdf.apply(lambda df: [df.latitude, df.longitude], axis = 1)
+    def update_lga(row):
+        if row in concordance.keys():
+            return concordance[row]
+        else:
+            return row
 
-heritage_suburbs = gpd.sjoin(heritage_data_gdf[['OBJECT_ID','ITEM_NAME','lat_long','geometry']],
-                           sal[['SAL_CODE21','SAL_NAME21','geometry']])
+    # SHR centroids file
+    heritage_centroids = gpd.read_file(
+        "data/heritage_stateheritageregistercentroids/SHR_CENTROIDS.shp"
+    )
+    heritage_centroids.geometry = heritage_centroids.geometry.to_crs(
+        "epsg:4326"
+    )
 
-# heritage_data_df = heritage_data_gdf.drop('geometry', axis = 1)
+    # Fix errors in LGA names in the SHR centroids file
+    heritage_centroids["LGA_updated"] = heritage_centroids["LGA"].apply(
+        update_lga
+    )
 
-heritage_df = heritage_suburbs[['OBJECT_ID',
- 'ITEM_NAME','SAL_NAME21','SAL_CODE21',
- 'lat_long']]
+    # Generate the lat long field
+    heritage_centroids["longitude"] = heritage_centroids.geometry.x
+    heritage_centroids["latitude"] = heritage_centroids.geometry.y
+    heritage_centroids["lat_long"] = heritage_centroids.apply(
+        lambda df: [df.latitude, df.longitude], axis=1
+    )
 
+    # Filtering out rows in the LGA column of the heritage centroids that are not an LGA
+    heritage_centroids_filtered = heritage_centroids[
+        heritage_centroids.LGA_updated.isin(lga.LGA.tolist())
+    ]
 
-heritage_df.to_csv('govhack/heritage_data_suburb.csv', index=False)
+    # Prepare file for export
+    heritage_centroids_export = heritage_centroids_filtered[
+        ["HOITEMID", "ITEMNAME", "ADDRESS", "LGA_updated", "lat_long"]
+    ].rename(columns={"LGA_updated": "LGA_NAME21"})
+
+    heritage_centroids_export.to_csv(
+        "working/shr_centroids_lat_long.csv", index=False
+    )
