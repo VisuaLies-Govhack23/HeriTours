@@ -4,6 +4,12 @@ import { useAutoAnimate } from '@formkit/auto-animate/react';
 import QuestionBox from './QuestionBox';
 import Vote from './Vote';
 
+const Column = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+`;
+
 const Header = styled.h4`
     font-weight: bold;
     font-size: 1rem;
@@ -13,7 +19,6 @@ const Header = styled.h4`
 `;
 
 const Textarea = styled.textarea`
-    width: 100%;
     height: 5rem;
 `;
 
@@ -42,13 +47,13 @@ const Citizen: React.FC<CitizenProps> = ({}) => {
             <Header>Help Us, and Earn Points</Header>
             <QuestionBox />
             {isListening && (
-                <div>
+                <Column>
                     <Header>Share Your Story</Header>
                     <Textarea />
                     <Row>
                         <Button onClick={doSubmitStory}>Share</Button>
                     </Row>
-                </div>
+                </Column>
             )}
             <Header>Community Stories</Header>
         </div>

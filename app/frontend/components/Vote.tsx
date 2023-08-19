@@ -7,10 +7,10 @@ const VoteBox = styled.div`
     display: flex;
     flex-direction: row;
     padding: 1rem;
+    justify-content: space-around;
 `;
 
 const StarBox = styled.div<{ hover: boolean; active: boolean }>`
-    flex: 1;
     svg {
         color: ${props => (props.hover ? primary : props.active ? dark : darkGrey)};
         height: 2rem;

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
+import { light, primary } from 'frontend/constants';
+import { MdClose } from 'react-icons/md';
 import Citizen from './Citizen';
 
 const ScreenColumn = styled.div`
@@ -19,14 +21,25 @@ const TabRow = styled.div`
 
 const TabItem = styled.button`
     flex: 1;
+    background: ${light};
     padding: 0.5rem;
+    border: none;
+    border-bottom: 6px solid ${primary};
+    margin-left: 0.5rem;
+    font-weight: 900;
     &:first-child {
-        margin-right: 1rem;
+        margin-left: 0rem;
     }
 `;
 
 const CloseButton = styled.button`
     padding: 0.5rem;
+    background: ${light};
+    border: none;
+    svg {
+        height: 1rem;
+        width: 1rem;
+    }
 `;
 
 const FormBody = styled.div`
@@ -99,7 +112,9 @@ const Details: React.FC<DetailsProps> = ({ onClose }) => {
                 <TabItem onClick={() => setTab(Tabs.insights)}>Local Insights</TabItem>
                 <TabItem onClick={() => setTab(Tabs.citizen)}>Your Stories</TabItem>
                 <TabItem onClick={() => setTab(Tabs.checkin)}>Check In</TabItem>
-                <CloseButton onClick={onClose}>Close</CloseButton>
+                <CloseButton onClick={onClose}>
+                    <MdClose />
+                </CloseButton>
             </TabRow>
             {body}
         </ScreenColumn>
