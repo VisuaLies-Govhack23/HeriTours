@@ -13,3 +13,4 @@ __pycache__
 
 # Database
 /heritage.db
+/heritage.db-journal
