@@ -101,6 +101,7 @@ const TourMap: React.FC<MapProps> = ({}) => {
                     <Polyline pathOptions={{ color: primary }} positions={line} />
                     {route.map(stop => (
                         <Marker
+                            key={stop.id}
                             position={stop.latlng}
                             eventHandlers={{
                                 click() {

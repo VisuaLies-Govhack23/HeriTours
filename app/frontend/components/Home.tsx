@@ -39,7 +39,7 @@ const Home: React.FC<HomeProps> = ({}) => {
     };
 
     const makeSearch = (query: string, title: string) => {
-        return () => search(query, title);
+        return () => void search(query, title);
     };
 
     return (
