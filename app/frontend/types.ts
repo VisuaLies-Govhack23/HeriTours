@@ -20,3 +20,12 @@ export interface SiteInfoData {
     questions: QuestionData[];
     story: StoryData;
 }
+
+export interface ItemData {
+    id: number;
+    name: string;
+    address: string;
+    latlng: [number, number];
+    data: Record<string, string>;
+    suburb: string;
+}
