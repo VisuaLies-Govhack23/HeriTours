@@ -109,4 +109,4 @@ async def ping():
 
 
 Server.mount(f"/js", StaticFiles(directory=JS_ROOT), name="js")
-Server.mount(f"/dashboard/resources", StaticFiles(directory=RESOURCES_ROOT), name="js")
+Server.mount(f"/dashboard/resources", StaticFiles(directory=RESOURCES_ROOT), name="resources")
