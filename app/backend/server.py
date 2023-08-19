@@ -15,6 +15,8 @@ db.init_database()
 DIST_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../dist"))
 INDEX_FILE = os.path.join(DIST_ROOT, "ui/static/index.html")
 JS_ROOT = os.path.join(DIST_ROOT, "ui/js")
+DASHBOARD_ROOT = os.path.join(DIST_ROOT, "../dashboard")
+RESOURCES_ROOT = os.path.join(DASHBOARD_ROOT, "resources")
 
 
 @Server.get("/")
@@ -29,13 +31,9 @@ async def index(request: Request):
 
 @Server.get("/dashboard/{dashboard_id}")
 async def dashboard(dashboard_id: str):
-    return HTMLResponse(
-        f"""<!DOCTYPE html>
-            <title>Blah</title>
-            <h1>Dashboard!</h1>
-            You requested dashboard: {dashboard_id}
-        """
-    )
+    with open(os.path.join(DASHBOARD_ROOT, "dashboard.html")) as f:
+        body = f.read()
+    return HTMLResponse(body)
 
 
 @Server.get("/site/{siteid}")
@@ -111,3 +109,4 @@ async def ping():
 
 
 Server.mount(f"/js", StaticFiles(directory=JS_ROOT), name="js")
+Server.mount(f"/dashboard/resources", StaticFiles(directory=RESOURCES_ROOT), name="js")
