@@ -14,3 +14,6 @@ __pycache__
 # Database
 /heritage.db
 /heritage.db-journal
+
+# Lock files - not using in "hackathon mode"
+/package-lock.json
