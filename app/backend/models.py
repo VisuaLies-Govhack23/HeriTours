@@ -29,7 +29,8 @@ class ItemData(BaseModel):
     name: str
     address: str
     latlng: tuple[float, float]
-    data: dict[str, str]
+    description: dict[str, str]
+    significance: dict[str, str]
     suburb: str
 
 

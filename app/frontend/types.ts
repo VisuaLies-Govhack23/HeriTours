@@ -26,7 +26,8 @@ export interface ItemData {
     name: string;
     address: string;
     latlng: [number, number];
-    data: Record<string, string>;
+    significance: Record<string, string>;
+    description: Record<string, string>;
     suburb: string;
 }
 

@@ -82,6 +82,8 @@ export interface DetailsProps {
 const Details: React.FC<DetailsProps> = ({ onClose, item }) => {
     const [tab, setTab] = useState(Tabs.about);
 
+    const data = { ...item.significance, ...item.description };
+
     let body: React.ReactNode;
     switch (tab) {
         case Tabs.about:
@@ -93,10 +95,10 @@ const Details: React.FC<DetailsProps> = ({ onClose, item }) => {
                     <InfoBlock>{item.address}</InfoBlock>
                     {keyDescriptions.map(
                         key =>
-                            key.key in item.data && (
+                            key.key in data && (
                                 <div key={key.key}>
                                     <Header>{key.title}</Header>
-                                    <InfoBlock>{item.data[key.key]}</InfoBlock>
+                                    <InfoBlock>{data[key.key]}</InfoBlock>
                                 </div>
                             )
                     )}

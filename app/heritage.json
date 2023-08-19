@@ -4,7 +4,8 @@
         "name": "Harbour Bridge",
         "address": "123 Street",
         "latlng": [-33.852, 151.21],
-        "data": { "key": "value" },
+        "significance": { "key": "value" },
+        "description": { "constructionYear": "value" },
         "suburb": "Sydney"
     },
     {
@@ -12,7 +13,8 @@
         "name": "Taronga Zoo",
         "address": "124 Street",
         "latlng": [-33.843, 151.241],
-        "data": { "key": "value2" },
+        "significance": { "key": "value2" },
+        "description": { "constructionYear": "value2" },
         "suburb": "Sydney"
     },
     {
@@ -20,7 +22,8 @@
         "name": "Parramatta",
         "address": "124 Street",
         "latlng": [-33.8150268,150.9881133],
-        "data": { "key": "value2" },
+        "significance": { "key": "value2" },
+        "description": { "constructionYear": "value2" },
         "suburb": "Parramatta"
     }
 ]

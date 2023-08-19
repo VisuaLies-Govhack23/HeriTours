@@ -23,7 +23,8 @@ const App: React.FC<AppProps> = ({}) => {
                         name: 'Test Name',
                         address: 'Test Address',
                         latlng: [0, 0],
-                        data: {},
+                        description: {},
+                        significance: {},
                         suburb: 'Test Suburb'
                     }}
                     onClose={() => console.error('nothing to close')}
