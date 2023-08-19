@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
+import { ItemData } from 'frontend/types';
 import { LatLngTuple } from 'leaflet';
 import { MdClose } from 'react-icons/md';
 import { CircleMarker, MapContainer, Marker, Polyline, TileLayer, Tooltip, useMap } from 'react-leaflet';
@@ -62,13 +63,13 @@ const AutoZoom: React.FC<{ line: LatLngTuple[] }> = ({ line }) => {
 export interface MapProps {}
 
 const TourMap: React.FC<MapProps> = ({}) => {
-    const [isShowingDetails, setShowingDetails] = useState(false);
+    const [currentItem, setCurrentItem] = useState<ItemData | null>(null);
     const tourName = useAppStore(state => state.tourName);
     const route = useAppStore(state => state.route);
     const currentLocation = useAppStore(state => state.positionLatLng);
 
     const doClose = () => {
-        setShowingDetails(false);
+        setCurrentItem(null);
     };
 
     const doHome = () => {
@@ -105,8 +106,7 @@ const TourMap: React.FC<MapProps> = ({}) => {
                             position={stop.latlng}
                             eventHandlers={{
                                 click() {
-                                    console.log('click');
-                                    setShowingDetails(true);
+                                    setCurrentItem(stop);
                                 }
                             }}>
                             <Tooltip permanent={true}>
@@ -116,8 +116,8 @@ const TourMap: React.FC<MapProps> = ({}) => {
                     ))}
                 </MapContainer>
             </ScreenColumn>
-            <Modal visible={isShowingDetails}>
-                <Details onClose={doClose} />
+            <Modal visible={currentItem !== null}>
+                {currentItem && <Details item={currentItem} onClose={doClose} />}
             </Modal>
         </>
     );

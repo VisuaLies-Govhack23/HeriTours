@@ -16,7 +16,19 @@ const App: React.FC<AppProps> = ({}) => {
         case Page.map:
             return <TourMap />;
         case Page.details:
-            return <Details onClose={() => console.error('nothing to close')} />;
+            return (
+                <Details
+                    item={{
+                        id: 0,
+                        name: 'Test Name',
+                        address: 'Test Address',
+                        latlng: [0, 0],
+                        data: {},
+                        suburb: 'Test Suburb'
+                    }}
+                    onClose={() => console.error('nothing to close')}
+                />
+            );
     }
 };
 

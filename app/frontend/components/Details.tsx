@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
+import { keyDescriptions } from 'frontend/keys';
+import { ItemData } from 'frontend/types';
 import { MdClose } from 'react-icons/md';
 import { light, primary } from '../constants';
 import Citizen from './Citizen';
@@ -73,10 +75,11 @@ enum Tabs {
 }
 
 export interface DetailsProps {
+    item: ItemData;
     onClose(): void;
 }
 
-const Details: React.FC<DetailsProps> = ({ onClose }) => {
+const Details: React.FC<DetailsProps> = ({ onClose, item }) => {
     const [tab, setTab] = useState(Tabs.about);
 
     let body: React.ReactNode;
@@ -84,17 +87,24 @@ const Details: React.FC<DetailsProps> = ({ onClose }) => {
         case Tabs.about:
             body = (
                 <FormBody>
-                    <Header>Description</Header>
-                    <InfoBlock>This building was created in 1895...</InfoBlock>
-                    <Header>Construction Year</Header>
-                    <InfoBlock>1895</InfoBlock>
-                    <Header>Historical Significance</Header>
-                    <InfoBlock>This building was created in 1895...</InfoBlock>
+                    <Header>Name</Header>
+                    <InfoBlock>{item.name}</InfoBlock>
+                    <Header>Address</Header>
+                    <InfoBlock>{item.address}</InfoBlock>
+                    {keyDescriptions.map(
+                        key =>
+                            key.key in item.data && (
+                                <div key={key.key}>
+                                    <Header>{key.title}</Header>
+                                    <InfoBlock>{item.data[key.key]}</InfoBlock>
+                                </div>
+                            )
+                    )}
                 </FormBody>
             );
             break;
         case Tabs.insights:
-            body = <Frame src="/dashboard/demo" />;
+            body = <Frame src={`/dashboard/demo`} />;
             break;
         case Tabs.citizen:
             body = <Citizen siteId="todo" />;
