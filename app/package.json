@@ -6,7 +6,7 @@
         "serve-watch": "./env/bin/uvicorn --reload --port 5000 'backend.server:Server'",
         "serve": "./env/bin/uvicorn --port 5000 'backend.server:Server'",
         "format": "./env/bin/isort backend && ./env/bin/black backend && prettier -w frontend dashboard package.json .*.json build.ts *.md .*.cjs",
-        "lint": "VIRTUAL_ENV=`pwd`/env PATH=`pwd`/env/bin:$PATH ./env/bin/pyright && tsc --noEmit && eslint frontend/",
+        "lint": "VIRTUAL_ENV=`pwd`/env PATH=`pwd`/env/bin:$PATH ./env/bin/pyright backend && tsc --noEmit && eslint frontend/",
         "upgrade": "npm-check-updates -u && npm install"
     },
     "dependencies": {
