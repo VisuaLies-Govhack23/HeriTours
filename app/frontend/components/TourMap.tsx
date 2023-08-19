@@ -41,6 +41,9 @@ const Title = styled.div`
 
 const TooltipText = styled.div`
     font-family: 'Playfair Display';
+    font-size: 0.6rem;
+    width: 30vw;
+    text-wrap: wrap;
 `;
 
 const position: LatLngTuple = [-33.885, 151.2];
@@ -110,7 +113,7 @@ const TourMap: React.FC<MapProps> = ({}) => {
                                 }
                             }}>
                             <Tooltip permanent={true}>
-                                <TooltipText>{stop.name}</TooltipText>
+                                <TooltipText>{stop.question}</TooltipText>
                             </Tooltip>
                         </Marker>
                     ))}

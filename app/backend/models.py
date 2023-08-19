@@ -28,6 +28,7 @@ class ItemData(BaseModel):
     id: int
     name: str
     address: str
+    question: str
     latlng: tuple[float, float]
     description: dict[str, str]
     significance: dict[str, str]

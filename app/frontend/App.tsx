@@ -25,6 +25,7 @@ const App: React.FC<AppProps> = ({}) => {
                         latlng: [0, 0],
                         description: {},
                         significance: {},
+                        question: 'What is this place?',
                         suburb: 'Test Suburb'
                     }}
                     onClose={() => console.error('nothing to close')}

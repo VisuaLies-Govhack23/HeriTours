@@ -25,6 +25,7 @@ export interface ItemData {
     id: number;
     name: string;
     address: string;
+    question: string;
     latlng: [number, number];
     significance: Record<string, string>;
     description: Record<string, string>;

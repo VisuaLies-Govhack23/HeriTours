@@ -52,7 +52,7 @@ const Home: React.FC<HomeProps> = ({}) => {
             <Column>
                 <Tour
                     name="Local Surprises"
-                    subtitle={nearby?.name && `Near you: ${nearby.name}`}
+                    subtitle={nearby?.question && `Near you: ${nearby.question}`}
                     onClick={makeSearch('', 'Local Surprises Tour')}
                 />
                 <Tour name="Victorian Architecture" onClick={makeSearch('victorian', 'Victorian Architecture')} />
