@@ -40,8 +40,9 @@ const Home: React.FC<HomeProps> = ({}) => {
         <ScreenColumn>
             <Spinner isDark={true} />
             <Logo />
+            <Header>To create an instant tour, enter a search:</Header>
             <Search onSearch={doSearch} />
-            <Header>Popular tours:</Header>
+            <Header>Or choose from a popular search:</Header>
             <Column>
                 <Tour name="Victorian Architecture" />
                 <Tour name="Georgian Architecture" />

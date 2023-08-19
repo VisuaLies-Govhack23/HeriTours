@@ -111,7 +111,7 @@ def get_questions(siteid):
     return [
         {
             "id": "q1",
-            "question": "Was there any recent graffiti?",
+            "question": "Was there any graffiti?",
             "answers": [{"id": "yes", "answer": "Yes"}, {"id": "no", "answer": "No"}],
         },
         {

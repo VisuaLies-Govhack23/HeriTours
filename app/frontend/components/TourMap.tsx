@@ -33,6 +33,9 @@ const CloseButton = styled.button`
 
 const Title = styled.div`
     flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 `;
 
 const TooltipText = styled.div`

@@ -10,6 +10,11 @@ const Question = styled.div`
     padding: 1rem;
 `;
 
+const Note = styled.div`
+    font-size: 0.8rem;
+    text-align: center;
+`;
+
 const Text = styled.div`
     text-align: center;
 `;
@@ -87,6 +92,7 @@ const QuestionBox: React.FC<QuestionBoxProps> = ({ questions, answered, onAnswer
                     Skip
                 </Answer>
             </Row>
+            <Note>(Answer as many questions as you wish)</Note>
         </Question>
     );
 };

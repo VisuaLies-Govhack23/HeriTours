@@ -30,7 +30,12 @@ export const home = () => {
 
 export const search = (query: string) => {
     console.log('search for', query);
-    useAppStore.setState(state => ({ ...state, page: Page.map }));
+    const words = query.split(' ');
+    const capitalized = words.map(word =>
+        word.match(/^[a-z]/) ? `${word.charAt(0).toUpperCase()}${word.substring(1)}` : word
+    );
+    const title = capitalized.join(' ');
+    useAppStore.setState(state => ({ ...state, page: Page.map, tour: title }));
 };
 
 export const initGeolocation = () => {

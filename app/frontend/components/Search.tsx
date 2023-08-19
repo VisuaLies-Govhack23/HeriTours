@@ -45,7 +45,9 @@ const Search: React.FC<HomeProps> = ({ onSearch }) => {
     const [query, setQuery] = useState('');
 
     const doSearch = () => {
-        onSearch(query);
+        if (query.length > 0) {
+            onSearch(query);
+        }
     };
 
     return (
