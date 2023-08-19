@@ -17,13 +17,13 @@ Do not explain your response. Only give a question.
 Focus on the most interesting and unique aspects of a site.
 Be specific.
 Be interesting.
-Be succinct.
+Be succinct: try to keep to less than 10 words.
 Be correct.
 You can be cryptic and playful.
 Avoid combining idea(e.g., with "and"): use the single strongest idea.
 Rely only on the information provided, do not use other knowledge you may have.
 Think about what might entice a visitor to want to see the site.
-Do not mention the name.
+Do not mention the name of the item -- that would spoil the fun.
 '''
 
 place = '105 George Street'
@@ -64,4 +64,6 @@ response = openai.ChatCompletion.create(
     user='govhack',
 )
 
-print(response)
+answer = response.get("choices")[0].get("message").get("content")
+
+print(answer)
