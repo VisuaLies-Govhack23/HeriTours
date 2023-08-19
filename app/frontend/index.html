@@ -26,6 +26,11 @@
         font-family: 'Playfair Display';
     }
 
+    canvas {
+        /* The confetti needs to appear over the map */
+        z-index: 5000 !important;
+    }
+
     @keyframes spinner {
         0% {
             left: -100vw;
