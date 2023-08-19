@@ -26,7 +26,6 @@ const TabItem = styled.button`
     border: none;
     border-bottom: 6px solid ${primary};
     margin-left: 0.5rem;
-    font-weight: 900;
     &:first-child {
         margin-left: 0rem;
     }

@@ -1,3 +1,4 @@
+import { LatLngTuple } from 'leaflet';
 import { create } from 'zustand';
 
 export enum Page {
@@ -9,11 +10,13 @@ export enum Page {
 interface AppState {
     page: Page;
     tour: string;
+    positionLatLng: LatLngTuple | null;
 }
 
 export const useAppStore = create<AppState>(() => ({
     page: Page.home,
-    tour: 'Tour'
+    tour: 'Tour',
+    positionLatLng: null
 }));
 
 export const home = () => {
@@ -29,6 +32,9 @@ export const initGeolocation = () => {
     if ('geolocation' in navigator) {
         navigator.geolocation.watchPosition(position => {
             console.log('position is', position);
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
+            useAppStore.setState(state => ({ ...state, positionLatLng: [lat, lng] }));
         });
     }
 };

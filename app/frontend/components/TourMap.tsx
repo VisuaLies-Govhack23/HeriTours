@@ -4,7 +4,7 @@ import { light, primary } from 'frontend/constants';
 import { home, useAppStore } from 'frontend/model';
 import { LatLngTuple } from 'leaflet';
 import { MdClose } from 'react-icons/md';
-import { MapContainer, Marker, Polyline, TileLayer, Tooltip } from 'react-leaflet';
+import { CircleMarker, MapContainer, Marker, Polyline, TileLayer, Tooltip } from 'react-leaflet';
 import Details from './Details';
 import { Modal } from './Modal';
 
@@ -34,15 +34,20 @@ const Title = styled.div`
     flex: 1;
 `;
 
+const TooltipText = styled.div`
+    font-family: 'Playfair Display';
+`;
+
 const position: LatLngTuple = [-33.885, 151.2];
 const position1: LatLngTuple = [-33.9, 151.2];
 const position2: LatLngTuple = [-33.87, 151.2];
 
-export interface MapProps {}
+export interface MapProps { }
 
-const TourMap: React.FC<MapProps> = ({}) => {
+const TourMap: React.FC<MapProps> = ({ }) => {
     const [isShowingDetails, setShowingDetails] = useState(false);
     const tourName = useAppStore(state => state.tour);
+    const currentLocation = useAppStore(state => state.positionLatLng);
 
     const doClose = () => {
         setShowingDetails(false);
@@ -68,6 +73,7 @@ const TourMap: React.FC<MapProps> = ({}) => {
                     scrollWheelZoom={true}
                     attributionControl={false}>
                     <TileLayer url="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
+                    {currentLocation && <CircleMarker center={currentLocation} />}
                     <Polyline pathOptions={{ color: primary }} positions={[position1, position2]} />
                     <Marker
                         position={position1}
@@ -77,7 +83,9 @@ const TourMap: React.FC<MapProps> = ({}) => {
                                 setShowingDetails(true);
                             }
                         }}>
-                        <Tooltip permanent={true}>Who was the first Governor?</Tooltip>
+                        <Tooltip permanent={true}>
+                            <TooltipText>Who was the first Governor?</TooltipText>
+                        </Tooltip>
                     </Marker>
                     <Marker
                         position={position2}
@@ -87,7 +95,9 @@ const TourMap: React.FC<MapProps> = ({}) => {
                                 setShowingDetails(true);
                             }
                         }}>
-                        <Tooltip permanent={true}>What is Sydney's oldest boat?</Tooltip>
+                        <Tooltip permanent={true}>
+                            <TooltipText>What is Sydney's oldest boat?</TooltipText>
+                        </Tooltip>
                     </Marker>
                 </MapContainer>
             </ScreenColumn>
