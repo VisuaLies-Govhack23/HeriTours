@@ -31,10 +31,10 @@ async def index(request: Request):
 async def dashboard(dashboard_id: str):
     return HTMLResponse(
         f"""<!DOCTYPE html>
-        <title>Blah</title>
-        <h1>Dashboard!</h1>
-        You requested dashboard: {dashboard_id}
-    """
+            <title>Blah</title>
+            <h1>Dashboard!</h1>
+            You requested dashboard: {dashboard_id}
+        """
     )
 
 
