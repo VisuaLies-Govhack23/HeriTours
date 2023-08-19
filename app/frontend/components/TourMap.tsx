@@ -7,6 +7,7 @@ import { MdClose } from 'react-icons/md';
 import { CircleMarker, MapContainer, Marker, Polyline, TileLayer, Tooltip } from 'react-leaflet';
 import Details from './Details';
 import { Modal } from './Modal';
+import Spinner from './Spinner';
 
 const ScreenColumn = styled.div`
     height: 100vh;
@@ -42,9 +43,9 @@ const position: LatLngTuple = [-33.885, 151.2];
 const position1: LatLngTuple = [-33.9, 151.2];
 const position2: LatLngTuple = [-33.87, 151.2];
 
-export interface MapProps { }
+export interface MapProps {}
 
-const TourMap: React.FC<MapProps> = ({ }) => {
+const TourMap: React.FC<MapProps> = ({}) => {
     const [isShowingDetails, setShowingDetails] = useState(false);
     const tourName = useAppStore(state => state.tour);
     const currentLocation = useAppStore(state => state.positionLatLng);
@@ -60,6 +61,7 @@ const TourMap: React.FC<MapProps> = ({ }) => {
     return (
         <>
             <ScreenColumn>
+                <Spinner isDark={false} />
                 <TitleBlock>
                     <Title>{tourName}</Title>
                     <CloseButton onClick={doHome}>

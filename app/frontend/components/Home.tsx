@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { search } from 'frontend/model';
 import Logo from './Logo';
 import Search from './Search';
+import Spinner from './Spinner';
 import Tour from './Tour';
 
 const ScreenColumn = styled.div`
@@ -37,6 +38,7 @@ const Home: React.FC<HomeProps> = ({}) => {
 
     return (
         <ScreenColumn>
+            <Spinner isDark={true} />
             <Logo />
             <Search onSearch={doSearch} />
             <Header>Popular tours:</Header>

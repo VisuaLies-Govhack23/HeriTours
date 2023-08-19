@@ -10,3 +10,6 @@ __pycache__
 
 # Private files
 /.env
+
+# Database
+/heritage.db

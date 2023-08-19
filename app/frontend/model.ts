@@ -11,12 +11,14 @@ interface AppState {
     page: Page;
     tour: string;
     positionLatLng: LatLngTuple | null;
+    loaders: number[];
 }
 
 export const useAppStore = create<AppState>(() => ({
     page: Page.home,
     tour: 'Tour',
-    positionLatLng: null
+    positionLatLng: null,
+    loaders: []
 }));
 
 export const home = () => {
