@@ -48,7 +48,7 @@ table_conc = pd.read_csv('working/table_name_concordance.csv')
 
 data_list = []
 
-for category in sorted(column_dict.keys())[:1]:
+for category in sorted(column_dict.keys()):
     
     
     print(category)
@@ -84,7 +84,7 @@ for category in sorted(column_dict.keys())[:1]:
 
     df_category_group_subset_melt = pd.melt(df_category_group_subset, id_vars = ['LGA_CODE_2021','LGA_NAME21'], value_vars = [x for x in df_category_group_subset if x not in ['SAL_CODE_2021','SAL_NAME21']], var_name = category, value_name = 'percentage')
 
+    df_category_group_subset_melt.LGA_NAME21 = df_category_group_subset_melt.LGA_NAME21.apply(lambda x: x.upper())
     # df_category_group_subset_melt_top5 = df_category_group_subset_melt.sort_values('percentage',ascending = False).groupby(['LGA_CODE_2021','LGA_NAME21']).head(5).reset_index()
 
     df_category_group_subset_melt.to_csv('working/{}.csv'.format(category), index=False)
-# 
