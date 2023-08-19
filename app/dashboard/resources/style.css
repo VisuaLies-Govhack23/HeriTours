@@ -11,22 +11,6 @@ body {
     padding: 20px;
 }
 
-.tab-buttons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.tab-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #f0f0f0;
-    cursor: pointer;
-}
-
-.tab-button.active {
-    background-color: #ccc;
-}
 
 .tab-content {
     border: 1px solid #ccc;
@@ -41,14 +25,56 @@ body {
     display: block;
 }
 
-h1 {
-    font-weight: solid;
+@keyframes slide-up {
+    0% { opacity: 0; bottom: -50%; } /* Initial state */
+    100% { opacity: 1; bottom: 15%; } /* Final state */
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    border-width: medium;
+    border-radius: 20px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Style for the pop-up content */
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    max-width: 80%;
     text-align: center;
 }
 
-.centered {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+/* Style for the "Show Answers" button */
+#showAnswersBtn {
+    margin-top: 15px;
+    cursor: pointer;
 }

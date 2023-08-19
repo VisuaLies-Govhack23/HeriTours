@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Tableau Dashboard Tab</title>
-        <link rel="stylesheet" href="resources/styles.css" />
+        <link rel="stylesheet" href="resources/style.css" />
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
@@ -25,9 +25,33 @@
         </style>
     </head>
     <body>
+        <div class="overlay" id="quizPopup">
+            <div class="popup-content">
+                <h2>G'day🤗We would like to challenge you with a quick quiz</h2>
+                <h3>Let us know how many questions you answer correctly!</h3>
+                <ol>
+                    <li>What is the traditional name for Australia's iconic natural landmark, Uluru?</li>
+                    <li>Which Aboriginal art form involves creating intricate patterns and designs on the ground using natural materials like sand, leaves, and rocks?</li>
+                    <li>What is the significance of the "Dreamtime" in Aboriginal culture?</li>
+                    <li>Which famous waterway in Australia is of great cultural and historical importance to the local Aboriginal people, known as the "Yolŋu"?</li>
+                    <li>What is a "corroboree" in Aboriginal culture?</li>
+                </ol>
+    
+                <button id="showAnswersBtn" onclick="showAnswers()">Show Answers</button>
+                <div id="answers" style="display: none;">
+                    <p>1. The traditional name for Uluru is Ayers Rock.</p>
+                    <p>2. The Aboriginal art form involving ground patterns is known as "Aboriginal Sand Art" or "Ground Painting.</p>
+                    <p>3. The Dreamtime, also known as "The Dreaming," is a fundamental concept in Aboriginal culture that encompasses their creation stories, spirituality, and connection to the land.</p>
+                    <p>4. The Arafura Sea, located between Australia and Timor-Leste, is culturally important to the Yolŋu people.</p>
+                    <p>5. A "corroboree" is a traditional Aboriginal gathering that involves dancing, singing, storytelling, and celebrating cultural heritage. It can vary in purpose, from ceremonies to social events.</p>
+                </div>
+                <button id= "quitBtn" onclick="hidePopup()">Quit</button>
+            </div>
+        </div>
+
         <div class="tab-container">
             <div class="tab-buttons">
-                <div class="container">
+                <div class="container" style="position: relative;">
                     <img
                         src="resources/historic.jpg"
                         alt="Snow"
@@ -38,130 +62,113 @@
                         class="centered"
                         style="
                             position: absolute;
-                            top: 70%;
-                            left: 40%;
-                            transform: translate(-20%, -50%);
-                            font-size: 50px;
+                            bottom: -50%; /* Start position below the container */
+                            left: 50%;
+                            transform: translate(-50%, 0);
+                            font-size: 32px;
                             color: whitesmoke;
+                            text-align: center;
+                            width: 100%;
+                            opacity: 0;
+                            animation: slide-up 2s ease-out forwards, fade-in 2s ease-out forwards;
                         ">
                         {SUBURB} QUICK STATS
                     </div>
                 </div>
-                <!-- <span style = 'text-align:center;font-style:italic;font-size:15px;'>This is where we put our problem statement </span> -->
-                <!-- <button class="tab-button active" onclick="openTab(event, 'dashboard1')">Dashboard 1</button> -->
-                <!-- <button class="tab-button" onclick="openTab(event, 'dashboard2')">Dashboard 2</button> -->
-                <!-- Add more buttons for additional dashboards if needed -->
             </div>
 
-            <h2 style="margin-left: 30px; margin-top: 30px">Heritage NSW Dashboard</h2>
-            <div class="dashboard1" style="margin-left: 100px; border-width: medium; border-radius: 20px">
-                <div
-                    class="tableauPlaceholder"
-                    id="viz1692422705768"
-                    style="
-                        position: relative;
-                        align-items: center;
-                        margin-left: 5%;
-                        display: flex;
-                        justify-content: center;
-                    ">
-                    <noscript
-                        ><a href="#"
-                            ><img
-                                alt="Local Insights "
-                                src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;S7&#47;S7SY6HRQ7&#47;1_rss.png"
-                                style="border: none" /></a></noscript
-                    ><object class="tableauViz" style="display: none">
-                        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
-                        <param name="embed_code_version" value="3" />
-                        <param name="path" value="shared&#47;S7SY6HRQ7" />
-                        <param name="toolbar" value="yes" />
-                        <param
-                            name="static_image"
-                            value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;S7&#47;S7SY6HRQ7&#47;1.png" />
-                        <param name="animate_transition" value="yes" />
-                        <param name="display_static_image" value="yes" />
-                        <param name="display_spinner" value="yes" />
-                        <param name="display_overlay" value="yes" />
-                        <param name="display_count" value="yes" />
-                        <param name="language" value="en-US" />
-                        <param name="filter" value="Parameters.suburb=Sydney" />
-                    </object>
+            <div class = "container">
+                <h3 style = "margin-top:10%;margin-bottom:5%;font-size:25px;">Country of Birth</h3>
+                <span style = "font-style:italic;font-size:15px">
+                    The country of birth of Australian people is diverse, reflecting the nation's multicultural makeup. People in Australia were born in various countries around the world, showcasing the country's history of immigration and global connections. This rich mix of national origins contributes to Australia's vibrant cultural landscape and fosters cross-cultural understanding.
+                </span>
+                <div class = "dashboard-container"> 
+                    <div class='tableauPlaceholder' id='viz1692452861955' style='position: relative'><noscript>
+                    <a href='#'><img alt='Birth_Country ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;WH&#47;WH4ZDRFF5&#47;1_rss.png' style='border: none' /></a></noscript>
+                    <object class='tableauViz'  style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                    <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;WH4ZDRFF5' /> 
+                    <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;WH&#47;WH4ZDRFF5&#47;1.png' /> 
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='Parameters.lga=WOLLONGONG' /></object></div>                
+                    <script type='text/javascript'>                    
+                    var divElement = document.getElementById('viz1692452861955');                    
+                    var vizElement = divElement.getElementsByTagName('object')[0];                    
+                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.maxWidth='382px';vizElement.style.height=(divElement.offsetWidth*0.5)+'px';vizElement.style.maxHeight='691px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.maxWidth='382px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';vizElement.style.maxHeight='691px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     
+                    var scriptElement = document.createElement('script');                    
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                    </script>
+                    </div>
+                    <span style="font-size:15px; font-style: italic;margin-top:5px">Source: Census Data 2021</span>
                 </div>
-                <script type="text/javascript">
-                    var divElement = document.getElementById('viz1692422705768');
-                    var vizElement = divElement.getElementsByTagName('object')[0];
-                    if (divElement.offsetWidth > 800) {
-                        vizElement.style.minWidth = '420px';
-                        vizElement.style.maxWidth = '650px';
-                        vizElement.style.width = '100%';
-                        vizElement.style.minHeight = '587px';
-                        vizElement.style.maxHeight = '887px';
-                        vizElement.style.height = divElement.offsetWidth * 0.75 + 'px';
-                    } else if (divElement.offsetWidth > 500) {
-                        vizElement.style.minWidth = '420px';
-                        vizElement.style.maxWidth = '650px';
-                        vizElement.style.width = '100%';
-                        vizElement.style.minHeight = '587px';
-                        vizElement.style.maxHeight = '887px';
-                        vizElement.style.height = divElement.offsetWidth * 0.75 + 'px';
-                    } else {
-                        vizElement.style.width = '100%';
-                        vizElement.style.height = '1027px';
-                    }
-                    var scriptElement = document.createElement('script');
-                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-                </script>
             </div>
 
-            <h2 style="margin-left: 30px; margin-top: 30px">Census 2021 Dashboard</h2>
-            <div class="dashboard2" style="margin-left: 150px; border-width: medium; border-radius: 20px"></div>
-            <div
-                class="tableauPlaceholder"
-                id="viz1692413887849"
-                style="
-                    position: relative;
-                    align-items: center;
-                    margin-right: 5%;
-                    display: flex;
-                    justify-content: center;
-                ">
-                <noscript
-                    ><a href="#"
-                        ><img
-                            alt="Sheet 1 "
-                            src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;he&#47;heritagetest&#47;Sheet1&#47;1_rss.png"
-                            style="border-width: thick" /></a></noscript
-                ><object class="tableauViz" style="display: none; align-items: center">
-                    <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
-                    <param name="embed_code_version" value="3" />
-                    <param name="site_root" value="" />
-                    <param name="name" value="heritagetest&#47;Sheet1" />
-                    <param name="tabs" value="no" />
-                    <param name="toolbar" value="yes" />
-                    <param
-                        name="static_image"
-                        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;he&#47;heritagetest&#47;Sheet1&#47;1.png" />
-                    <param name="animate_transition" value="yes" />
-                    <param name="display_static_image" value="yes" />
-                    <param name="display_spinner" value="yes" />
-                    <param name="display_overlay" value="yes" />
-                    <param name="display_count" value="yes" />
-                    <param name="language" value="en-US" />
-                    <param name="filter" value="Parameters.param2=WOLLONGONG" />
-                </object>
+
+            <div class="container">
+                <h3 style = "margin-top:10%;margin-bottom:5%;font-size:25px;">Heritage Item Status</h3>
+                <span style = "font-style:italic;font-size:15px">
+                    Heritage item status in New South Wales, Australia, underscores the significance of preserving historical, cultural, and architectural assets. Robust preservation efforts are aimed at safeguarding these items for future generations, with regulations and initiatives in place to ensure responsible management and conservation. This commitment reflects the state's dedication to maintaining a tangible link to its past, fostering a sense of identity, and promoting cultural appreciation.
+                </span>
+                <div class = "dashboard-container">
+                    <div class='tableauPlaceholder' id='viz1692452499325' style='position: relative; align-items: center;'><noscript>
+                    <a href='#'><img alt='Heritage ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;H7&#47;H767XG55B&#47;1_rss.png' style='border: none' /></a></noscript>
+                    <object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                    <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;H767XG55B' /> 
+                    <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;H7&#47;H767XG55B&#47;1.png' /> 
+                    <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='Parameters.lga=WOLLONGONG' /></object></div>                
+                    <script type='text/javascript'>                    
+                    var divElement = document.getElementById('viz1692452499325');                    
+                    var vizElement = divElement.getElementsByTagName('object')[0];                    
+                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='382px';vizElement.style.height='691px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='382px';vizElement.style.height='691px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     
+                    var scriptElement = document.createElement('script');                    
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);               
+                    </script>
+                    </div>
+                    <span style="font-size:15px; font-style: italic;margin-top:5px">Source: Heritage NSW Data</span>
+                </div>
             </div>
-            <script type="text/javascript">
-                var divElement = document.getElementById('viz1692413887849');
-                var vizElement = divElement.getElementsByTagName('object')[0];
-                vizElement.style.width = '100%';
-                vizElement.style.height = divElement.offsetWidth * 0.6 + 'px';
-                var scriptElement = document.createElement('script');
-                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                vizElement.parentNode.insertBefore(scriptElement, vizElement);
-            </script>
-        </div>
+
+            
+            <div class = "container">
+                <h3 style = "margin-top:10%">Indigenous Status</h3>
+                <div class = "dashboard-container">
+                    <div class='tableauPlaceholder' id='viz1692453479741' style='position: relative'><noscript>
+                    <a href='#'><img alt='Indigenous_Status ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ZY&#47;ZY27M7M96&#47;1_rss.png' style='border: none' /></a></noscript>
+                    <object class='tableauViz'  style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                    <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;ZY27M7M96' /> 
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ZY&#47;ZY27M7M96&#47;1.png' /> 
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                    <param name='filter' value='Parameters.lga=WOLLONGONG' /></object></div>                
+                    <script type='text/javascript'>                    
+                    var divElement = document.getElementById('viz1692453479741');                    
+                    var vizElement = divElement.getElementsByTagName('object')[0];                    
+                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.maxWidth='382px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';vizElement.style.maxHeight='691px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.maxWidth='382px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';vizElement.style.maxHeight='691px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     
+                    var scriptElement = document.createElement('script');                   
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                    </script>
+                    </div>
+                    <span style="font-size:15px; font-style: italic;margin-top:5px; margin-bottom: 10%">Source: Census Data 2021</span>
+                </div>
+            </div>
         <script src="resources/script.js"></script>
     </body>
 </html>

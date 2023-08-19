@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Styles for the pop-up overlay and content */
+        /* ... (same as previous code) ... */
+    </style>
+</head>
+<body>
+    <div class="overlay" id="quizPopup">
+        <div class="popup-content">
+            <h3>Quiz</h3>
+            <ol>
+                <li>The capital of France is _______.</li>
+                <li>The largest planet in our solar system is _______.</li>
+                <li>The process of plants making their own food is called _______.</li>
+                <li>Mount Everest is the highest peak in the _______ mountain range.</li>
+                <li>The chemical symbol for gold is _______.</li>
+            </ol>
+
+            <button id="showAnswersBtn" onclick="showAnswers()">Show Answers</button>
+            <div id="answers" style="display: none;">
+                <p>1. Paris</p>
+                <p>2. Jupiter</p>
+                <p>3. Photosynthesis</p>
+                <p>4. Himalayan</p>
+                <p>5. Au</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to show the quiz pop-up
+        function showPopup() {
+            var popup = document.getElementById("quizPopup");
+            popup.style.display = "flex";
+        }
+
+        // Function to show the answers
+        function showAnswers() {
+            var answersDiv = document.getElementById("answers");
+            answersDiv.style.display = "block";
+        }
+
+        // Automatically show the pop-up when the page loads
+        document.addEventListener("DOMContentLoaded", function () {
+            showPopup();
+        });
+    </script>
+</body>
+</html>

@@ -18,6 +18,7 @@ cmd mkdir -p /app
 WORKDIR /app
 COPY requirements.txt ./requirements.txt
 RUN pip3 install -r requirements.txt
+RUN npm install 
 COPY . .
 RUN chmod +x run.sh
 #ENTRYPOINT ["streamlit", "run"]
