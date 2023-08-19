@@ -33,6 +33,7 @@ async def index(request: Request):
 async def dashboard(dashboard_id: str):
     with open(os.path.join(DASHBOARD_ROOT, "dashboard.html")) as f:
         body = f.read()
+    body = body.replace("Sydney", dashboard_id)
     return HTMLResponse(body)
 
 
@@ -109,4 +110,6 @@ async def ping():
 
 
 Server.mount(f"/js", StaticFiles(directory=JS_ROOT), name="js")
-Server.mount(f"/dashboard/resources", StaticFiles(directory=RESOURCES_ROOT), name="resources")
+Server.mount(
+    f"/dashboard/resources", StaticFiles(directory=RESOURCES_ROOT), name="resources"
+)
