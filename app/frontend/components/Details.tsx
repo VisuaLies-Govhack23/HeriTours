@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
+import Citizen from './Citizen';
 
 const ScreenColumn = styled.div`
     height: 100vh;
@@ -54,7 +55,9 @@ const Frame = styled.iframe`
 
 enum Tabs {
     about = 'about',
-    insights = 'insights'
+    insights = 'insights',
+    citizen = 'citizen',
+    checkin = 'checkin'
 }
 
 export interface DetailsProps {
@@ -80,6 +83,13 @@ const Details: React.FC<DetailsProps> = ({ onClose }) => {
             break;
         case Tabs.insights:
             body = <Frame src="/dashboard/demo" />;
+            break;
+        case Tabs.citizen:
+            body = <Citizen />;
+            break;
+        case Tabs.checkin:
+            body = <div>Check in</div>;
+            break;
     }
 
     return (
@@ -87,6 +97,8 @@ const Details: React.FC<DetailsProps> = ({ onClose }) => {
             <TabRow>
                 <TabItem onClick={() => setTab(Tabs.about)}>About</TabItem>
                 <TabItem onClick={() => setTab(Tabs.insights)}>Local Insights</TabItem>
+                <TabItem onClick={() => setTab(Tabs.citizen)}>Your Stories</TabItem>
+                <TabItem onClick={() => setTab(Tabs.checkin)}>Check In</TabItem>
                 <CloseButton onClick={onClose}>Close</CloseButton>
             </TabRow>
             {body}

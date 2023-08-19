@@ -35,7 +35,7 @@ async def nearest(lat: float, lon: float):
 
 
 @Server.get("/tour/{query}")
-async def nearest(query: str):
+async def tour(query: str):
     print("generating tour for", query)
     return JSONResponse({"stops": []})
 

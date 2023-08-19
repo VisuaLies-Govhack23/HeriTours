@@ -8,18 +8,24 @@ export enum Page {
 
 interface AppState {
     page: Page;
+    tour: string;
 }
 
 export const useAppStore = create<AppState>(() => ({
-    page: Page.home
+    page: Page.home,
+    tour: 'Tour'
 }));
+
+export const home = () => {
+    useAppStore.setState(state => ({ ...state, page: Page.home }));
+};
 
 export const search = (query: string) => {
     console.log('search for', query);
     useAppStore.setState(state => ({ ...state, page: Page.map }));
 };
 
-export const initGeolocation = async () => {
+export const initGeolocation = () => {
     if ('geolocation' in navigator) {
         navigator.geolocation.watchPosition(position => {
             console.log('position is', position);

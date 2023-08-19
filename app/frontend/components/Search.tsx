@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import { dark, light, primary, primaryLight } from 'frontend/constants';
+import { dark, darkGrey, light, primary } from 'frontend/constants';
 import { MdSearch } from 'react-icons/md';
 
 const Row = styled.div`
@@ -28,7 +28,7 @@ const Button = styled.button`
     padding: 0.5rem;
     align-items: center;
     &:hover {
-        background-color: ${primaryLight};
+        background-color: ${darkGrey};
     }
     svg {
         height: 2rem;

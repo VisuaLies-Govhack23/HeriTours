@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { search } from 'frontend/model';
+import Logo from './Logo';
 import Search from './Search';
 import Tour from './Tour';
 
@@ -20,6 +21,13 @@ const Column = styled.div`
     overflow-y: scroll;
 `;
 
+const Header = styled.h2`
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 0.5rem;
+    margin: 1rem 0 0.5rem 0;
+`;
+
 export interface HomeProps {}
 
 const Home: React.FC<HomeProps> = ({}) => {
@@ -29,7 +37,9 @@ const Home: React.FC<HomeProps> = ({}) => {
 
     return (
         <ScreenColumn>
+            <Logo />
             <Search onSearch={doSearch} />
+            <Header>Popular tours:</Header>
             <Column>
                 <Tour name="Victorian Architecture" />
                 <Tour name="Georgian Architecture" />
