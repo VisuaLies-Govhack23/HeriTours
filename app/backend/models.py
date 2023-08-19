@@ -31,3 +31,7 @@ class ItemData(BaseModel):
     latlng: tuple[float, float]
     data: dict[str, str]
     suburb: str
+
+
+class RouteData(BaseModel):
+    stops: list[ItemData]

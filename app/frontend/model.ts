@@ -1,6 +1,7 @@
 import { LatLngTuple } from 'leaflet';
 import { create } from 'zustand';
-import { ItemData, SiteInfoData } from './types';
+import { sydneyLatLong } from './constants';
+import { ItemData, RouteData, SiteInfoData } from './types';
 
 export enum Page {
     home = 'home',
@@ -17,6 +18,7 @@ interface AppState {
     loaders: number[];
     nearest: ItemData | null;
     nearestVersion: number;
+    route: ItemData[];
 }
 
 export const useAppStore = create<AppState>(() => ({
@@ -25,26 +27,42 @@ export const useAppStore = create<AppState>(() => ({
     positionLatLng: null,
     loaders: [],
     nearest: null,
-    nearestVersion: 0
+    nearestVersion: 0,
+    route: []
 }));
 
 export const home = () => {
     useAppStore.setState(state => ({ ...state, page: Page.home }));
 };
 
-export const search = (query: string) => {
+export const search = async (query: string): Promise<RouteData> => {
     console.log('search for', query);
     const words = query.split(' ');
     const capitalized = words.map(word =>
         word.match(/^[a-z]/) ? `${word.charAt(0).toUpperCase()}${word.substring(1)}` : word
     );
     const title = capitalized.join(' ');
-    useAppStore.setState(state => ({ ...state, page: Page.map, tour: title }));
+    const id = idGenerator++;
+    try {
+        useAppStore.setState(state => ({ ...state, loaders: [...state.loaders, id] }));
+
+        const position = useAppStore.getState().positionLatLng ?? sydneyLatLong;
+        const result = await fetch(`/tour/${position[0]}/${position[1]}/${encodeURIComponent(query)}`, {
+            credentials: 'include'
+        });
+        const json = (await result.json()) as RouteData;
+
+        useAppStore.setState(state => ({ ...state, page: Page.map, tour: title, route: json.stops }));
+        return json;
+    } finally {
+        // Remove from queue of pending requests
+        useAppStore.setState(state => ({ ...state, loaders: state.loaders.filter(item => item != id) }));
+    }
 };
 
 export const initGeolocation = () => {
     if ('geolocation' in navigator) {
-        navigator.geolocation.watchPosition(async position => {
+        navigator.geolocation.watchPosition(position => {
             console.log('position is', position);
             const lat = position.coords.latitude;
             const lng = position.coords.longitude;
@@ -52,15 +70,19 @@ export const initGeolocation = () => {
             if (oldPos === null || lat !== oldPos[0] || lng !== oldPos[1]) {
                 const newPos: LatLngTuple = [lat, lng];
                 useAppStore.setState(state => ({ ...state, positionLatLng: newPos }));
-                const request = idGenerator++;
-                const best = await getNearest(lat, lng);
-                console.log('nearest', best);
-                // Only update the state if there hasn't been a more recent request
-                useAppStore.setState(state =>
-                    state.nearestVersion < request && state.nearest?.id !== best.id
-                        ? { ...state, nearest: best, nearestVersion: request }
-                        : state
-                );
+
+                // Fetch the nearest interesting point
+                void (async () => {
+                    const request = idGenerator++;
+                    const best = await getNearest(lat, lng);
+                    console.log('nearest', best);
+                    // Only update the state if there hasn't been a more recent request
+                    useAppStore.setState(state =>
+                        state.nearestVersion < request && state.nearest?.id !== best.id
+                            ? { ...state, nearest: best, nearestVersion: request }
+                            : state
+                    );
+                })();
             }
         });
     }

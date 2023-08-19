@@ -6,7 +6,7 @@ from fastapi.staticfiles import StaticFiles
 
 from . import database as db
 from .generate_id import make_userid
-from .models import SiteInfoData
+from .models import RouteData, SiteInfoData
 
 Server = FastAPI()
 
@@ -100,10 +100,15 @@ async def nearest(lat: float, lng: float):
     )
 
 
-@Server.get("/tour/{query}")
-async def tour(query: str):
+@Server.get("/tour/{lat}/{lng}/{query}")
+async def tour(lat: float, lng: float, query: str):
     print("generating tour for", query)
-    return JSONResponse({"stops": []})
+    result = db.get_tour(lat, lng, query)
+    print(result)
+    return Response(
+        RouteData(stops=result).model_dump_json(),
+        headers={"content-type": "application/json"},
+    )
 
 
 @Server.get("/api/ping")

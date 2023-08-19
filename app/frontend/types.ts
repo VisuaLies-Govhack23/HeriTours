@@ -29,3 +29,7 @@ export interface ItemData {
     data: Record<string, string>;
     suburb: string;
 }
+
+export interface RouteData {
+    stops: ItemData[];
+}

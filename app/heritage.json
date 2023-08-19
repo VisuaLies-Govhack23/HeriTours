@@ -14,5 +14,13 @@
         "latlng": [-33.843, 151.241],
         "data": { "key": "value2" },
         "suburb": "Sydney"
+    },
+    {
+        "id": 3,
+        "name": "Parramatta",
+        "address": "124 Street",
+        "latlng": [-33.8150268,150.9881133],
+        "data": { "key": "value2" },
+        "suburb": "Parramatta"
     }
 ]

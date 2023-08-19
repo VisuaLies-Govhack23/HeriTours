@@ -5,6 +5,7 @@ import sqlite3
 from haversine import haversine
 
 from .models import AnswerData, ItemData, QuestionData, StoryData
+from .shortest_path import find_shortest_path
 
 conn = sqlite3.connect("heritage.db")
 
@@ -160,3 +161,55 @@ def get_nearest(lat, lng):
             best = item
             best_distance = distance
     return best
+
+
+def get_tour(lat, lng, query, max_size=10) -> list[ItemData]:
+    user = (lat, lng)
+    weights = []
+
+    # Compute weights
+    # TODO include query in weights calculation
+    print("ignoring query", query)
+    for index, item in enumerate(heritage_items):
+        weight = haversine(user, item.latlng)
+        weights.append((weight, index))
+    weights.sort()
+
+    # Get the closest candidates
+    topn = min(len(weights), max_size)
+    shortlist = []
+    for _, index in weights[:topn]:
+        shortlist.append(heritage_items[index])
+    shortlist.append(None)
+
+    # Compute the cost matrix
+    costs = []
+    for i in range(topn + 1):
+        row = []
+        for j in range(topn + 1):
+            if i == j:
+                row.append(math.inf)
+            elif i == topn:
+                end = shortlist[j]
+                distance = haversine(user, end.latlng)
+                row.append(distance)
+            elif j == topn:
+                start = shortlist[i]
+                distance = haversine(start.latlng, user)
+                row.append(distance)
+            else:
+                start = shortlist[i]
+                end = shortlist[j]
+                distance = haversine(start.latlng, end.latlng)
+                row.append(distance)
+        costs.append(row)
+
+    # Find the shortest route
+    _, route = find_shortest_path(topn, topn + 1, costs)
+
+    # Extract the result
+    result = []
+    for i in range(topn):
+        result.append(shortlist[route[i + 1]])
+
+    return result
