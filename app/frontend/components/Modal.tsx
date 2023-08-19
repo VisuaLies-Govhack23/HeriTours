@@ -38,6 +38,9 @@ const Overlay = styled.div<{ visible: boolean }>`
     background-color: ${light};
     z-index: 2000;
     pointer-events: initial;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
 `;
 
 interface ModalProps {

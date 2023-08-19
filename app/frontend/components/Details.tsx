@@ -5,7 +5,7 @@ import { light, primary } from '../constants';
 import Citizen from './Citizen';
 
 const ScreenColumn = styled.div`
-    height: 100vh;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: stretch;

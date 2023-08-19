@@ -1,0 +1,496 @@
+Sequential,Short,Long,DataPack file,Profile table,Column heading description in profile
+P891,A_0_4_Indig_M,0_4_years_Aboriginal_and_or_Torres_Strait_Islander_Males,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Males
+P892,A_0_4_Indig_F,0_4_years_Aboriginal_and_or_Torres_Strait_Islander_Females,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Females
+P893,A_0_4_Indig_P,0_4_years_Aboriginal_and_or_Torres_Strait_Islander_Persons,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Persons
+P894,A_0_4_Non_Indig_M,0_4_years_Non_Indigenous_Males,P07,P07,Non-Indigenous: Males
+P895,A_0_4_Non_Indig_F,0_4_years_Non_Indigenous_Females,P07,P07,Non-Indigenous: Females
+P896,A_0_4_Non_Indig_P,0_4_years_Non_Indigenous_Persons,P07,P07,Non-Indigenous: Persons
+P897,A_0_4_Indig_status_ns_M,0_4_years_Indigenous_status_not_stated_Males,P07,P07,Indigenous: status not stated: Males
+P898,A_0_4_Indig_status_ns_F,0_4_years_Indigenous_status_not_stated_Females,P07,P07,Indigenous: status not stated: Females
+P899,A_0_4_Indig_status_ns_P,0_4_years_Indigenous_status_not_stated_Persons,P07,P07,Indigenous: status not stated: Persons
+P900,A_0_4_Tot_M,0_4_years_Total_Males,P07,P07,Total: Males
+P901,A_0_4_Tot_F,0_4_years_Total_Females,P07,P07,Total: Females
+P902,A_0_4_Tot_P,0_4_years_Total_Persons,P07,P07,Total: Persons
+P903,A_5_9_Indig_M,5_9_years_Aboriginal_and_or_Torres_Strait_Islander_Males,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Males
+P904,A_5_9_Indig_F,5_9_years_Aboriginal_and_or_Torres_Strait_Islander_Females,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Females
+P905,A_5_9_Indig_P,5_9_years_Aboriginal_and_or_Torres_Strait_Islander_Persons,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Persons
+P906,A_5_9_Non_Indig_M,5_9_years_Non_Indigenous_Males,P07,P07,Non-Indigenous: Males
+P907,A_5_9_Non_Indig_F,5_9_years_Non_Indigenous_Females,P07,P07,Non-Indigenous: Females
+P908,A_5_9_Non_Indig_P,5_9_years_Non_Indigenous_Persons,P07,P07,Non-Indigenous: Persons
+P909,A_5_9_Indig_status_ns_M,5_9_years_Indigenous_status_not_stated_Males,P07,P07,Indigenous: status not stated: Males
+P910,A_5_9_Indig_status_ns_F,5_9_years_Indigenous_status_not_stated_Females,P07,P07,Indigenous: status not stated: Females
+P911,A_5_9_Indig_status_ns_P,5_9_years_Indigenous_status_not_stated_Persons,P07,P07,Indigenous: status not stated: Persons
+P912,A_5_9_Tot_M,5_9_years_Total_Males,P07,P07,Total: Males
+P913,A_5_9_Tot_F,5_9_years_Total_Females,P07,P07,Total: Females
+P914,A_5_9_Tot_P,5_9_years_Total_Persons,P07,P07,Total: Persons
+P915,A_10_14_Indig_M,10_14_years_Aboriginal_and_or_Torres_Strait_Islander_Males,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Males
+P916,A_10_14_Indig_F,10_14_years_Aboriginal_and_or_Torres_Strait_Islander_Females,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Females
+P917,A_10_14_Indig_P,10_14_years_Aboriginal_and_or_Torres_Strait_Islander_Persons,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Persons
+P918,A_10_14_Non_Indig_M,10_14_years_Non_Indigenous_Males,P07,P07,Non-Indigenous: Males
+P919,A_10_14_Non_Indig_F,10_14_years_Non_Indigenous_Females,P07,P07,Non-Indigenous: Females
+P920,A_10_14_Non_Indig_P,10_14_years_Non_Indigenous_Persons,P07,P07,Non-Indigenous: Persons
+P921,A_10_14_Indig_status_ns_M,10_14_years_Indigenous_status_not_stated_Males,P07,P07,Indigenous: status not stated: Males
+P922,A_10_14_Indig_status_ns_F,10_14_years_Indigenous_status_not_stated_Females,P07,P07,Indigenous: status not stated: Females
+P923,A_10_14_Indig_status_ns_P,10_14_years_Indigenous_status_not_stated_Persons,P07,P07,Indigenous: status not stated: Persons
+P924,A_10_14_Tot_M,10_14_years_Total_Males,P07,P07,Total: Males
+P925,A_10_14_Tot_F,10_14_years_Total_Females,P07,P07,Total: Females
+P926,A_10_14_Tot_P,10_14_years_Total_Persons,P07,P07,Total: Persons
+P927,A_15_19_Indig_M,15_19_years_Aboriginal_and_or_Torres_Strait_Islander_Males,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Males
+P928,A_15_19_Indig_F,15_19_years_Aboriginal_and_or_Torres_Strait_Islander_Females,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Females
+P929,A_15_19_Indig_P,15_19_years_Aboriginal_and_or_Torres_Strait_Islander_Persons,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Persons
+P930,A_15_19_Non_Indig_M,15_19_years_Non_Indigenous_Males,P07,P07,Non-Indigenous: Males
+P931,A_15_19_Non_Indig_F,15_19_years_Non_Indigenous_Females,P07,P07,Non-Indigenous: Females
+P932,A_15_19_Non_Indig_P,15_19_years_Non_Indigenous_Persons,P07,P07,Non-Indigenous: Persons
+P933,A_15_19_Indig_status_ns_M,15_19_years_Indigenous_status_not_stated_Males,P07,P07,Indigenous: status not stated: Males
+P934,A_15_19_Indig_status_ns_F,15_19_years_Indigenous_status_not_stated_Females,P07,P07,Indigenous: status not stated: Females
+P935,A_15_19_Indig_status_ns_P,15_19_years_Indigenous_status_not_stated_Persons,P07,P07,Indigenous: status not stated: Persons
+P936,A_15_19_Tot_M,15_19_years_Total_Males,P07,P07,Total: Males
+P937,A_15_19_Tot_F,15_19_years_Total_Females,P07,P07,Total: Females
+P938,A_15_19_Tot_P,15_19_years_Total_Persons,P07,P07,Total: Persons
+P939,A_20_24_Indig_M,20_24_years_Aboriginal_and_or_Torres_Strait_Islander_Males,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Males
+P940,A_20_24_Indig_F,20_24_years_Aboriginal_and_or_Torres_Strait_Islander_Females,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Females
+P941,A_20_24_Indig_P,20_24_years_Aboriginal_and_or_Torres_Strait_Islander_Persons,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Persons
+P942,A_20_24_Non_Indig_M,20_24_years_Non_Indigenous_Males,P07,P07,Non-Indigenous: Males
+P943,A_20_24_Non_Indig_F,20_24_years_Non_Indigenous_Females,P07,P07,Non-Indigenous: Females
+P944,A_20_24_Non_Indig_P,20_24_years_Non_Indigenous_Persons,P07,P07,Non-Indigenous: Persons
+P945,A_20_24_Indig_status_ns_M,20_24_years_Indigenous_status_not_stated_Males,P07,P07,Indigenous: status not stated: Males
+P946,A_20_24_Indig_status_ns_F,20_24_years_Indigenous_status_not_stated_Females,P07,P07,Indigenous: status not stated: Females
+P947,A_20_24_Indig_status_ns_P,20_24_years_Indigenous_status_not_stated_Persons,P07,P07,Indigenous: status not stated: Persons
+P948,A_20_24_Tot_M,20_24_years_Total_Males,P07,P07,Total: Males
+P949,A_20_24_Tot_F,20_24_years_Total_Females,P07,P07,Total: Females
+P950,A_20_24_Tot_P,20_24_years_Total_Persons,P07,P07,Total: Persons
+P951,A_25_29_Indig_M,25_29_years_Aboriginal_and_or_Torres_Strait_Islander_Males,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Males
+P952,A_25_29_Indig_F,25_29_years_Aboriginal_and_or_Torres_Strait_Islander_Females,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Females
+P953,A_25_29_Indig_P,25_29_years_Aboriginal_and_or_Torres_Strait_Islander_Persons,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Persons
+P954,A_25_29_Non_Indig_M,25_29_years_Non_Indigenous_Males,P07,P07,Non-Indigenous: Males
+P955,A_25_29_Non_Indig_F,25_29_years_Non_Indigenous_Females,P07,P07,Non-Indigenous: Females
+P956,A_25_29_Non_Indig_P,25_29_years_Non_Indigenous_Persons,P07,P07,Non-Indigenous: Persons
+P957,A_25_29_Indig_status_ns_M,25_29_years_Indigenous_status_not_stated_Males,P07,P07,Indigenous: status not stated: Males
+P958,A_25_29_Indig_status_ns_F,25_29_years_Indigenous_status_not_stated_Females,P07,P07,Indigenous: status not stated: Females
+P959,A_25_29_Indig_status_ns_P,25_29_years_Indigenous_status_not_stated_Persons,P07,P07,Indigenous: status not stated: Persons
+P960,A_25_29_Tot_M,25_29_years_Total_Males,P07,P07,Total: Males
+P961,A_25_29_Tot_F,25_29_years_Total_Females,P07,P07,Total: Females
+P962,A_25_29_Tot_P,25_29_years_Total_Persons,P07,P07,Total: Persons
+P963,A_30_34_Indig_M,30_34_years_Aboriginal_and_or_Torres_Strait_Islander_Males,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Males
+P964,A_30_34_Indig_F,30_34_years_Aboriginal_and_or_Torres_Strait_Islander_Females,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Females
+P965,A_30_34_Indig_P,30_34_years_Aboriginal_and_or_Torres_Strait_Islander_Persons,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Persons
+P966,A_30_34_Non_Indig_M,30_34_years_Non_Indigenous_Males,P07,P07,Non-Indigenous: Males
+P967,A_30_34_Non_Indig_F,30_34_years_Non_Indigenous_Females,P07,P07,Non-Indigenous: Females
+P968,A_30_34_Non_Indig_P,30_34_years_Non_Indigenous_Persons,P07,P07,Non-Indigenous: Persons
+P969,A_30_34_Indig_status_ns_M,30_34_years_Indigenous_status_not_stated_Males,P07,P07,Indigenous: status not stated: Males
+P970,A_30_34_Indig_status_ns_F,30_34_years_Indigenous_status_not_stated_Females,P07,P07,Indigenous: status not stated: Females
+P971,A_30_34_Indig_status_ns_P,30_34_years_Indigenous_status_not_stated_Persons,P07,P07,Indigenous: status not stated: Persons
+P972,A_30_34_Tot_M,30_34_years_Total_Males,P07,P07,Total: Males
+P973,A_30_34_Tot_F,30_34_years_Total_Females,P07,P07,Total: Females
+P974,A_30_34_Tot_P,30_34_years_Total_Persons,P07,P07,Total: Persons
+P975,A_35_39_Indig_M,35_39_years_Aboriginal_and_or_Torres_Strait_Islander_Males,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Males
+P976,A_35_39_Indig_F,35_39_years_Aboriginal_and_or_Torres_Strait_Islander_Females,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Females
+P977,A_35_39_Indig_P,35_39_years_Aboriginal_and_or_Torres_Strait_Islander_Persons,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Persons
+P978,A_35_39_Non_Indig_M,35_39_years_Non_Indigenous_Males,P07,P07,Non-Indigenous: Males
+P979,A_35_39_Non_Indig_F,35_39_years_Non_Indigenous_Females,P07,P07,Non-Indigenous: Females
+P980,A_35_39_Non_Indig_P,35_39_years_Non_Indigenous_Persons,P07,P07,Non-Indigenous: Persons
+P981,A_35_39_Indig_status_ns_M,35_39_years_Indigenous_status_not_stated_Males,P07,P07,Indigenous: status not stated: Males
+P982,A_35_39_Indig_status_ns_F,35_39_years_Indigenous_status_not_stated_Females,P07,P07,Indigenous: status not stated: Females
+P983,A_35_39_Indig_status_ns_P,35_39_years_Indigenous_status_not_stated_Persons,P07,P07,Indigenous: status not stated: Persons
+P984,A_35_39_Tot_M,35_39_years_Total_Males,P07,P07,Total: Males
+P985,A_35_39_Tot_F,35_39_years_Total_Females,P07,P07,Total: Females
+P986,A_35_39_Tot_P,35_39_years_Total_Persons,P07,P07,Total: Persons
+P987,A_40_44_Indig_M,40_44_years_Aboriginal_and_or_Torres_Strait_Islander_Males,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Males
+P988,A_40_44_Indig_F,40_44_years_Aboriginal_and_or_Torres_Strait_Islander_Females,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Females
+P989,A_40_44_Indig_P,40_44_years_Aboriginal_and_or_Torres_Strait_Islander_Persons,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Persons
+P990,A_40_44_Non_Indig_M,40_44_years_Non_Indigenous_Males,P07,P07,Non-Indigenous: Males
+P991,A_40_44_Non_Indig_F,40_44_years_Non_Indigenous_Females,P07,P07,Non-Indigenous: Females
+P992,A_40_44_Non_Indig_P,40_44_years_Non_Indigenous_Persons,P07,P07,Non-Indigenous: Persons
+P993,A_40_44_Indig_status_ns_M,40_44_years_Indigenous_status_not_stated_Males,P07,P07,Indigenous: status not stated: Males
+P994,A_40_44_Indig_status_ns_F,40_44_years_Indigenous_status_not_stated_Females,P07,P07,Indigenous: status not stated: Females
+P995,A_40_44_Indig_status_ns_P,40_44_years_Indigenous_status_not_stated_Persons,P07,P07,Indigenous: status not stated: Persons
+P996,A_40_44_Tot_M,40_44_years_Total_Males,P07,P07,Total: Males
+P997,A_40_44_Tot_F,40_44_years_Total_Females,P07,P07,Total: Females
+P998,A_40_44_Tot_P,40_44_years_Total_Persons,P07,P07,Total: Persons
+P999,A_45_49_Indig_M,45_49_years_Aboriginal_and_or_Torres_Strait_Islander_Males,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Males
+P1000,A_45_49_Indig_F,45_49_years_Aboriginal_and_or_Torres_Strait_Islander_Females,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Females
+P1001,A_45_49_Indig_P,45_49_years_Aboriginal_and_or_Torres_Strait_Islander_Persons,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Persons
+P1002,A_45_49_Non_Indig_M,45_49_years_Non_Indigenous_Males,P07,P07,Non-Indigenous: Males
+P1003,A_45_49_Non_Indig_F,45_49_years_Non_Indigenous_Females,P07,P07,Non-Indigenous: Females
+P1004,A_45_49_Non_Indig_P,45_49_years_Non_Indigenous_Persons,P07,P07,Non-Indigenous: Persons
+P1005,A_45_49_Indig_status_ns_M,45_49_years_Indigenous_status_not_stated_Males,P07,P07,Indigenous: status not stated: Males
+P1006,A_45_49_Indig_status_ns_F,45_49_years_Indigenous_status_not_stated_Females,P07,P07,Indigenous: status not stated: Females
+P1007,A_45_49_Indig_status_ns_P,45_49_years_Indigenous_status_not_stated_Persons,P07,P07,Indigenous: status not stated: Persons
+P1008,A_45_49_Tot_M,45_49_years_Total_Males,P07,P07,Total: Males
+P1009,A_45_49_Tot_F,45_49_years_Total_Females,P07,P07,Total: Females
+P1010,A_45_49_Tot_P,45_49_years_Total_Persons,P07,P07,Total: Persons
+P1011,A_50_54_Indig_M,50_54_years_Aboriginal_and_or_Torres_Strait_Islander_Males,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Males
+P1012,A_50_54_Indig_F,50_54_years_Aboriginal_and_or_Torres_Strait_Islander_Females,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Females
+P1013,A_50_54_Indig_P,50_54_years_Aboriginal_and_or_Torres_Strait_Islander_Persons,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Persons
+P1014,A_50_54_Non_Indig_M,50_54_years_Non_Indigenous_Males,P07,P07,Non-Indigenous: Males
+P1015,A_50_54_Non_Indig_F,50_54_years_Non_Indigenous_Females,P07,P07,Non-Indigenous: Females
+P1016,A_50_54_Non_Indig_P,50_54_years_Non_Indigenous_Persons,P07,P07,Non-Indigenous: Persons
+P1017,A_50_54_Indig_status_ns_M,50_54_years_Indigenous_status_not_stated_Males,P07,P07,Indigenous: status not stated: Males
+P1018,A_50_54_Indig_status_ns_F,50_54_years_Indigenous_status_not_stated_Females,P07,P07,Indigenous: status not stated: Females
+P1019,A_50_54_Indig_status_ns_P,50_54_years_Indigenous_status_not_stated_Persons,P07,P07,Indigenous: status not stated: Persons
+P1020,A_50_54_Tot_M,50_54_years_Total_Males,P07,P07,Total: Males
+P1021,A_50_54_Tot_F,50_54_years_Total_Females,P07,P07,Total: Females
+P1022,A_50_54_Tot_P,50_54_years_Total_Persons,P07,P07,Total: Persons
+P1023,A_55_59_Indig_M,55_59_years_Aboriginal_and_or_Torres_Strait_Islander_Males,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Males
+P1024,A_55_59_Indig_F,55_59_years_Aboriginal_and_or_Torres_Strait_Islander_Females,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Females
+P1025,A_55_59_Indig_P,55_59_years_Aboriginal_and_or_Torres_Strait_Islander_Persons,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Persons
+P1026,A_55_59_Non_Indig_M,55_59_years_Non_Indigenous_Males,P07,P07,Non-Indigenous: Males
+P1027,A_55_59_Non_Indig_F,55_59_years_Non_Indigenous_Females,P07,P07,Non-Indigenous: Females
+P1028,A_55_59_Non_Indig_P,55_59_years_Non_Indigenous_Persons,P07,P07,Non-Indigenous: Persons
+P1029,A_55_59_Indig_status_ns_M,55_59_years_Indigenous_status_not_stated_Males,P07,P07,Indigenous: status not stated: Males
+P1030,A_55_59_Indig_status_ns_F,55_59_years_Indigenous_status_not_stated_Females,P07,P07,Indigenous: status not stated: Females
+P1031,A_55_59_Indig_status_ns_P,55_59_years_Indigenous_status_not_stated_Persons,P07,P07,Indigenous: status not stated: Persons
+P1032,A_55_59_Tot_M,55_59_years_Total_Males,P07,P07,Total: Males
+P1033,A_55_59_Tot_F,55_59_years_Total_Females,P07,P07,Total: Females
+P1034,A_55_59_Tot_P,55_59_years_Total_Persons,P07,P07,Total: Persons
+P1035,A_60_64_Indig_M,60_64_years_Aboriginal_and_or_Torres_Strait_Islander_Males,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Males
+P1036,A_60_64_Indig_F,60_64_years_Aboriginal_and_or_Torres_Strait_Islander_Females,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Females
+P1037,A_60_64_Indig_P,60_64_years_Aboriginal_and_or_Torres_Strait_Islander_Persons,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Persons
+P1038,A_60_64_Non_Indig_M,60_64_years_Non_Indigenous_Males,P07,P07,Non-Indigenous: Males
+P1039,A_60_64_Non_Indig_F,60_64_years_Non_Indigenous_Females,P07,P07,Non-Indigenous: Females
+P1040,A_60_64_Non_Indig_P,60_64_years_Non_Indigenous_Persons,P07,P07,Non-Indigenous: Persons
+P1041,A_60_64_Indig_status_ns_M,60_64_years_Indigenous_status_not_stated_Males,P07,P07,Indigenous: status not stated: Males
+P1042,A_60_64_Indig_status_ns_F,60_64_years_Indigenous_status_not_stated_Females,P07,P07,Indigenous: status not stated: Females
+P1043,A_60_64_Indig_status_ns_P,60_64_years_Indigenous_status_not_stated_Persons,P07,P07,Indigenous: status not stated: Persons
+P1044,A_60_64_Tot_M,60_64_years_Total_Males,P07,P07,Total: Males
+P1045,A_60_64_Tot_F,60_64_years_Total_Females,P07,P07,Total: Females
+P1046,A_60_64_Tot_P,60_64_years_Total_Persons,P07,P07,Total: Persons
+P1047,A_65_and_over_Indig_M,65_years_and_over_Aboriginal_and_or_Torres_Strait_Islander_Males,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Males
+P1048,A_65_and_over_Indig_F,65_years_and_over_Aboriginal_and_or_Torres_Strait_Islander_Females,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Females
+P1049,A_65_and_over_Indig_P,65_years_and_over_Aboriginal_and_or_Torres_Strait_Islander_Persons,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Persons
+P1050,A_65_and_over_Non_Indig_M,65_years_and_over_Non_Indigenous_Males,P07,P07,Non-Indigenous: Males
+P1051,A_65_and_over_Non_Indig_F,65_years_and_over_Non_Indigenous_Females,P07,P07,Non-Indigenous: Females
+P1052,A_65_and_over_Non_Indig_P,65_years_and_over_Non_Indigenous_Persons,P07,P07,Non-Indigenous: Persons
+P1053,A_65_and_over_Indig_stat_ns_M,65_years_and_over_Indigenous_status_not_stated_Males,P07,P07,Indigenous: status not stated: Males
+P1054,A_65_and_over_Indig_stat_ns_F,65_years_and_over_Indigenous_status_not_stated_Females,P07,P07,Indigenous: status not stated: Females
+P1055,A_65_and_over_Indig_stat_ns_P,65_years_and_over_Indigenous_status_not_stated_Persons,P07,P07,Indigenous: status not stated: Persons
+P1056,A_65_and_over_Tot_M,65_years_and_over_Total_Males,P07,P07,Total: Males
+P1057,A_65_and_over_Tot_F,65_years_and_over_Total_Females,P07,P07,Total: Females
+P1058,A_65_and_over_Tot_P,65_years_and_over_Total_Persons,P07,P07,Total: Persons
+P1059,Tot_Indig_M,Total_Aboriginal_and_or_Torres_Strait_Islander_Males,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Males
+P1060,Tot_Indig_F,Total_Aboriginal_and_or_Torres_Strait_Islander_Females,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Females
+P1061,Tot_Indig_P,Total_Aboriginal_and_or_Torres_Strait_Islander_Persons,P07,P07,Aboriginal_and_or_Torres_Strait_Islander: Persons
+P1062,Tot_Non_Indig_M,Total_Non_Indigenous_Males,P07,P07,Non-Indigenous: Males
+P1063,Tot_Non_Indig_F,Total_Non_Indigenous_Females,P07,P07,Non-Indigenous: Females
+P1064,Tot_Non_Indig_P,Total_Non_Indigenous_Persons,P07,P07,Non-Indigenous: Persons
+P1065,Tot_Indig_status_ns_M,Total_Indigenous_status_not_stated_Males,P07,P07,Indigenous: status not stated: Males
+P1066,Tot_Indig_status_ns_F,Total_Indigenous_status_not_stated_Females,P07,P07,Indigenous: status not stated: Females
+P1067,Tot_Indig_status_ns_P,Total_Indigenous_status_not_stated_Persons,P07,P07,Indigenous: status not stated: Persons
+P1068,Tot_Tot_M,Total_Total_Males,P07,P07,Total: Males
+P1069,Tot_Tot_F,Total_Total_Females,P07,P07,Total: Females
+P1070,Tot_Tot_P,Total_Total_Persons,P07,P07,Total: Persons
+P1071,Aus_Both_prnts_born_os,Australian_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1072,Aus_Father_only_born_os,Australian_Father_only_born_overseas,P08,P08,Father only born overseas
+P1073,Aus_Mother_only_born_os,Australian_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1074,Aus_Both_prnts_born_Aus,Australian_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1075,Aus_bp_ns,Australian_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1076,Aus_Tot_R,Australian_Total_Responses,P08,P08,Total responses
+P1077,Aus_Abor_Both_pare_brn_os,Australian_Aboriginal_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1078,Aus_Abor_Father_only_brn_os,Australian_Aboriginal_Father_only_born_overseas,P08,P08,Father only born overseas
+P1079,Aus_Abor_Mother_only_brn_os,Australian_Aboriginal_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1080,Aus_Abor_Both_pare_brn_Aus,Australian_Aboriginal_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1081,Aus_Abor_bp_ns,Australian_Aboriginal_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1082,Aus_Aborigin_Tot_R,Australian_Aboriginal_Total_Responses,P08,P08,Total responses
+P1083,Chin_Both_prnts_born_os,Chinese_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1084,Chin_Father_only_born_os,Chinese_Father_only_born_overseas,P08,P08,Father only born overseas
+P1085,Chin_Mother_only_born_os,Chinese_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1086,Chin_Bth_prnts_born_Aus,Chinese_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1087,Chin_bp_ns,Chinese_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1088,Chin_Tot_R,Chinese_Total_Responses,P08,P08,Total responses
+P1089,Croat_Both_prnts_born_os,Croatian_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1090,Croat_Father_only_born_os,Croatian_Father_only_born_overseas,P08,P08,Father only born overseas
+P1091,Croat_Mother_only_born_os,Croatian_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1092,Croat_Bth_parnts_born_Aus,Croatian_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1093,Croat_bp_ns,Croatian_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1094,Croat_Tot_R,Croatian_Total_Responses,P08,P08,Total responses
+P1095,Dutch_Both_prnts_born_os,Dutch_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1096,Dutch_Father_only_born_os,Dutch_Father_only_born_overseas,P08,P08,Father only born overseas
+P1097,Dutch_Mother_only_born_os,Dutch_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1098,Dutch_Both_prnts_born_Aus,Dutch_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1099,Dutch_bp_ns,Dutch_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1100,Dutch_Tot_R,Dutch_Total_Responses,P08,P08,Total responses
+P1101,Eng_Both_prnts_born_os,English_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1102,Eng_Father_only_born_os,English_Father_only_born_overseas,P08,P08,Father only born overseas
+P1103,Eng_Mother_only_born_os,English_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1104,Eng_Both_prnts_born_Aus,English_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1105,Eng_bp_ns,English_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1106,Eng_Tot_R,English_Total_Responses,P08,P08,Total responses
+P1107,Fili_Both_prnts_born_os,Filipino_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1108,Fili_Father_only_born_os,Filipino_Father_only_born_overseas,P08,P08,Father only born overseas
+P1109,Fili_Mother_only_born_os,Filipino_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1110,Fili_Both_prnts_born_Aus,Filipino_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1111,Fili_bp_ns,Filipino_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1112,Fili_Tot_R,Filipino_Total_Responses,P08,P08,Total responses
+P1113,Fren_Both_prnts_born_os,French_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1114,Fren_Father_only_born_os,French_Father_only_born_overseas,P08,P08,Father only born overseas
+P1115,Fren_Mother_only_born_os,French_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1116,Fren_Both_prnts_born_Aus,French_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1117,Fren_bp_ns,French_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1118,Fren_Tot_R,French_Total_Responses,P08,P08,Total responses
+P1119,Ger_Both_prnts_born_os,German_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1120,Ger_Father_only_born_os,German_Father_only_born_overseas,P08,P08,Father only born overseas
+P1121,Ger_Mother_only_born_os,German_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1122,Ger_Both_prnts_born_Aus,German_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1123,Ger_bp_ns,German_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1124,Ger_Tot_R,German_Total_Responses,P08,P08,Total responses
+P1125,Greek_Both_prnts_born_os,Greek_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1126,Greek_Father_only_born_os,Greek_Father_only_born_overseas,P08,P08,Father only born overseas
+P1127,Greek_Mother_only_born_os,Greek_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1128,Greek_Both_prnts_born_Aus,Greek_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1129,Greek_bp_ns,Greek_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1130,Greek_Tot_R,Greek_Total_Responses,P08,P08,Total responses
+P1131,Hung_Bth_prnts_born_os,Hungarian_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1132,Hung_Father_only_born_os,Hungarian_Father_only_born_overseas,P08,P08,Father only born overseas
+P1133,Hung_Mother_only_born_os,Hungarian_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1134,Hung_Bth_prents_brn_Aus,Hungarian_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1135,Hung_bp_ns,Hungarian_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1136,Hung_Tot_R,Hungarian_Total_Responses,P08,P08,Total responses
+P1137,Ind_Both_prnts_born_os,Indian_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1138,Ind_Father_only_born_os,Indian_Father_only_born_overseas,P08,P08,Father only born overseas
+P1139,Ind_Mother_only_born_os,Indian_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1140,Ind_Both_prnts_born_Aus,Indian_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1141,Ind_bp_ns,Indian_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1142,Ind_Tot_R,Indian_Total_Responses,P08,P08,Total responses
+P1143,Irish_Both_prnts_born_os,Irish_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1144,Irish_Father_only_born_os,Irish_Father_only_born_overseas,P08,P08,Father only born overseas
+P1145,Irish_Mother_only_born_os,Irish_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1146,Irish_Both_prnts_born_Aus,Irish_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1147,Irish_bp_ns,Irish_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1148,Irish_Tot_R,Irish_Total_Responses,P08,P08,Total responses
+P1149,Ital_Both_prnts_born_os,Italian_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1150,Ital_Father_only_born_os,Italian_Father_only_born_overseas,P08,P08,Father only born overseas
+P1151,Ital_Mother_only_born_os,Italian_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1152,Ital_Bth_prnts_born_Aus,Italian_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1153,Ital_bp_ns,Italian_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1154,Ital_Tot_R,Italian_Total_Responses,P08,P08,Total responses
+P1155,Kor_Both_prnts_born_os,Korean_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1156,Kor_Father_only_born_os,Korean_Father_only_born_overseas,P08,P08,Father only born overseas
+P1157,Kor_Mother_only_born_os,Korean_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1158,Kor_Both_prnts_born_Aus,Korean_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1159,Kor_bp_ns,Korean_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1160,Kor_Tot_R,Korean_Total_Responses,P08,P08,Total responses
+P1161,Leb_Both_prnts_born_os,Lebanese_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1162,Leb_Father_only_born_os,Lebanese_Father_only_born_overseas,P08,P08,Father only born overseas
+P1163,Leb_Mother_only_born_os,Lebanese_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1164,Leb_Bth_prents_born_Aus,Lebanese_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1165,Leb_bp_ns,Lebanese_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1166,Leb_Tot_R,Lebanese_Total_Responses,P08,P08,Total responses
+P1167,Mac_Bth_parnts_born_os,Macedonian_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1168,Mac_Father_only_brn_os,Macedonian_Father_only_born_overseas,P08,P08,Father only born overseas
+P1169,Mac_Mother_only_brn_os,Macedonian_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1170,Mac_Bth_prnts_brn_Aus,Macedonian_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1171,Mac_bp_ns,Macedonian_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1172,Mac_Tot_R,Macedonian_Total_Responses,P08,P08,Total responses
+P1173,Malt_Both_prnts_born_os,Maltese_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1174,Malt_Father_only_born_os,Maltese_Father_only_born_overseas,P08,P08,Father only born overseas
+P1175,Malt_Mother_only_born_os,Maltese_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1176,Malt_Bth_prnts_born_Aus,Maltese_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1177,Malt_bp_ns,Maltese_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1178,Malt_Tot_R,Maltese_Total_Responses,P08,P08,Total responses
+P1179,Maori_Both_prnts_born_os,Maori_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1180,Maori_Father_only_born_os,Maori_Father_only_born_overseas,P08,P08,Father only born overseas
+P1181,Maori_Mother_only_born_os,Maori_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1182,Maori_Both_prnts_born_Aus,Maori_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1183,Maori_bp_ns,Maori_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1184,Maori_Tot_R,Maori_Total_Responses,P08,P08,Total responses
+P1185,NZ_Both_prnts_born_os,New_Zealander_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1186,NZ_Father_only_born_os,New_Zealander_Father_only_born_overseas,P08,P08,Father only born overseas
+P1187,NZ_Mother_only_born_os,New_Zealander_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1188,NZ_Both_prnts_born_Aus,New_Zealander_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1189,NZ_bp_ns,New_Zealander_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1190,NZ_Tot_R,New_Zealander_Total_Responses,P08,P08,Total responses
+P1191,Pol_Both_prnts_born_os,Polish_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1192,Pol_Father_only_born_os,Polish_Father_only_born_overseas,P08,P08,Father only born overseas
+P1193,Pol_Mother_only_born_os,Polish_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1194,Pol_Both_prnts_born_Aus,Polish_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1195,Pol_bp_ns,Polish_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1196,Pol_Tot_R,Polish_Total_Responses,P08,P08,Total responses
+P1197,Russ_Both_prnts_born_os,Russian_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1198,Russ_Father_only_born_os,Russian_Father_only_born_overseas,P08,P08,Father only born overseas
+P1199,Russ_Mother_only_born_os,Russian_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1200,Russ_Bth_prnts_born_Aus,Russian_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1201,Russ_bp_ns,Russian_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1202,Russ_Tot_R,Russian_Total_Responses,P08,P08,Total responses
+P1203,Samoan_Both_prnts_born_os,Samoan_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1204,Samoan_Father_only_born_os,Samoan_Father_only_born_overseas,P08,P08,Father only born overseas
+P1205,Samoan_Mother_only_born_os,Samoan_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1206,Samoan_Bth_prnts_born_Aus,Samoan_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1207,Samoan_bp_ns,Samoan_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1208,Samoan_Tot_R,Samoan_Total_Responses,P08,P08,Total responses
+P1209,Scott_Both_prnts_born_os,Scottish_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1210,Scott_Father_only_born_os,Scottish_Father_only_born_overseas,P08,P08,Father only born overseas
+P1211,Scott_Mother_only_born_os,Scottish_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1212,Scott_Bth_prnts_brn_Aus,Scottish_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1213,Scott_bp_ns,Scottish_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1214,Scott_Tot_R,Scottish_Total_Responses,P08,P08,Total responses
+P1215,Serb_Both_prnts_born_os,Serbian_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1216,Serb_Father_only_born_os,Serbian_Father_only_born_overseas,P08,P08,Father only born overseas
+P1217,Serb_Mother_only_born_os,Serbian_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1218,Serb_Bth_prnts_born_Aus,Serbian_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1219,Serb_bp_ns,Serbian_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1220,Serb_Tot_R,Serbian_Total_Responses,P08,P08,Total responses
+P1221,SthA_Both_prnts_born_os,South_African_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1222,SthA_Father_only_born_os,South_African_Father_only_born_overseas,P08,P08,Father only born overseas
+P1223,SthA_Mother_only_born_os,South_African_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1224,SthA_Bth_prnts_born_Aus,South_African_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1225,SthA_bp_ns,South_African_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1226,SthA_Tot_R,South_African_Total_Responses,P08,P08,Total responses
+P1227,Span_Both_prnts_born_os,Spanish_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1228,Span_Father_only_born_os,Spanish_Father_only_born_overseas,P08,P08,Father only born overseas
+P1229,Span_Mother_only_born_os,Spanish_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1230,Span_Bth_prnts_born_Aus,Spanish_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1231,Span_bp_ns,Spanish_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1232,Span_Tot_R,Spanish_Total_Responses,P08,P08,Total responses
+P1233,Sri_Lkn_Bth_prnts_born_os,Sri_Lankan_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1234,Sri_Lkn_Father_only_born_os,Sri_Lankan_Father_only_born_overseas,P08,P08,Father only born overseas
+P1235,Sri_Lkn_Mother_only_born_os,Sri_Lankan_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1236,Sri_Lkn_Bth_prents_brn_Aus,Sri_Lankan_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1237,Sri_Lkn_bp_ns,Sri_Lankan_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1238,Sri_Lkn_Tot_R,Sri_Lankan_Total_Responses,P08,P08,Total responses
+P1239,Viet_Bth_prnts_brn_os,Vietnamese_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1240,Viet_Father_only_brn_os,Vietnamese_Father_only_born_overseas,P08,P08,Father only born overseas
+P1241,Viet_Mother_only_brn_os,Vietnamese_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1242,Viet_Bth_prnts_brn_Aus,Vietnamese_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1243,Viet_bp_ns,Vietnamese_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1244,Viet_Tot_R,Vietnamese_Total_Responses,P08,P08,Total responses
+P1245,Welsh_Both_prnts_born_os,Welsh_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1246,Welsh_Father_only_born_os,Welsh_Father_only_born_overseas,P08,P08,Father only born overseas
+P1247,Welsh_Mother_only_born_os,Welsh_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1248,Welsh_Both_prnts_born_Aus,Welsh_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1249,Welsh_bp_ns,Welsh_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1250,Welsh_Tot_R,Welsh_Total_Responses,P08,P08,Total responses
+P1251,Oth_Both_prnts_born_os,Other_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1252,Oth_Father_only_born_os,Other_Father_only_born_overseas,P08,P08,Father only born overseas
+P1253,Oth_Mother_only_born_os,Other_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1254,Oth_Both_prnts_born_Aus,Other_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1255,Oth_bp_ns,Other_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1256,Oth_Tot_R,Other_Total_Responses,P08,P08,Total responses
+P1257,Ancest_ns_Bth_parnts_brn_os,Ancestry_not_stated_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1258,Ancest_ns_Fther_only_brn_os,Ancestry_not_stated_Father_only_born_overseas,P08,P08,Father only born overseas
+P1259,Ancest_ns_Mther_only_brn_os,Ancestry_not_stated_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1260,Ancest_ns_Bth_prnt_brn_Aus,Ancestry_not_stated_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1261,Ancest_ns_bp_ns,Ancestry_not_stated_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1262,Ancest_ns_Tot_R,Ancestry_not_stated_Total_Responses,P08,P08,Total responses
+P1263,Tot_P_Bth_parnts_brn_os,Total_persons_Both_parents_born_overseas,P08,P08,Both parents born overseas
+P1264,Tot_P_Fther_only_brn_os,Total_persons_Father_only_born_overseas,P08,P08,Father only born overseas
+P1265,Tot_P_Mther_only_brn_os,Total_persons_Mother_only_born_overseas,P08,P08,Mother only born overseas
+P1266,Tot_P_Bth_prnts_brn_Aus,Total_persons_Both_parents_born_in_Australia,P08,P08,Both parents born in Australia
+P1267,Tot_P_bp_ns,Total_persons_Birthplace_not_stated,P08,P08,Birthplace not stated
+P1268,Tot_P_Tot_R,Total_persons_Total_Responses,P08,P08,Total responses
+P1269,Australia_M,Australia_Males,P09,P09,Males
+P1270,Australia_F,Australia_Females,P09,P09,Females
+P1271,Australia_P,Australia_Persons,P09,P09,Persons
+P1272,Afghanistan_M,Afghanistan_Males,P09,P09,Males
+P1273,Afghanistan_F,Afghanistan_Females,P09,P09,Females
+P1274,Afghanistan_P,Afghanistan_Persons,P09,P09,Persons
+P1275,Bangladesh_M,Bangladesh_Males,P09,P09,Males
+P1276,Bangladesh_F,Bangladesh_Females,P09,P09,Females
+P1277,Bangladesh_P,Bangladesh_Persons,P09,P09,Persons
+P1278,Canada_M,Canada_Males,P09,P09,Males
+P1279,Canada_F,Canada_Females,P09,P09,Females
+P1280,Canada_P,Canada_Persons,P09,P09,Persons
+P1281,China_excl_SARs_Taiwan_M,China_excludes_SARs_and_Taiwan_Males,P09,P09,Males
+P1282,China_excl_SARs_Taiwan_F,China_excludes_SARs_and_Taiwan_Females,P09,P09,Females
+P1283,China_excl_SARs_Taiwan_P,China_excludes_SARs_and_Taiwan_Persons,P09,P09,Persons
+P1284,Croatia_M,Croatia_Males,P09,P09,Males
+P1285,Croatia_F,Croatia_Females,P09,P09,Females
+P1286,Croatia_P,Croatia_Persons,P09,P09,Persons
+P1287,Egypt_M,Egypt_Males,P09,P09,Males
+P1288,Egypt_F,Egypt_Females,P09,P09,Females
+P1289,Egypt_P,Egypt_Persons,P09,P09,Persons
+P1290,Fiji_M,Fiji_Males,P09,P09,Males
+P1291,Fiji_F,Fiji_Females,P09,P09,Females
+P1292,Fiji_P,Fiji_Persons,P09,P09,Persons
+P1293,Germany_M,Germany_Males,P09,P09,Males
+P1294,Germany_F,Germany_Females,P09,P09,Females
+P1295,Germany_P,Germany_Persons,P09,P09,Persons
+P1296,Greece_M,Greece_Males,P09,P09,Males
+P1297,Greece_F,Greece_Females,P09,P09,Females
+P1298,Greece_P,Greece_Persons,P09,P09,Persons
+P1299,Hong_Kong_SAR_China_M,Hong_Kong_SAR_of_China_Males,P09,P09,Males
+P1300,Hong_Kong_SAR_China_F,Hong_Kong_SAR_of_China_Females,P09,P09,Females
+P1301,Hong_Kong_SAR_China_P,Hong_Kong_SAR_of_China_Persons,P09,P09,Persons
+P1302,India_M,India_Males,P09,P09,Males
+P1303,India_F,India_Females,P09,P09,Females
+P1304,India_P,India_Persons,P09,P09,Persons
+P1305,Indonesia_M,Indonesia_Males,P09,P09,Males
+P1306,Indonesia_F,Indonesia_Females,P09,P09,Females
+P1307,Indonesia_P,Indonesia_Persons,P09,P09,Persons
+P1308,Iran_M,Iran_Males,P09,P09,Males
+P1309,Iran_F,Iran_Females,P09,P09,Females
+P1310,Iran_P,Iran_Persons,P09,P09,Persons
+P1311,Iraq_M,Iraq_Males,P09,P09,Males
+P1312,Iraq_F,Iraq_Females,P09,P09,Females
+P1313,Iraq_P,Iraq_Persons,P09,P09,Persons
+P1314,Ireland_M,Ireland_Males,P09,P09,Males
+P1315,Ireland_F,Ireland_Females,P09,P09,Females
+P1316,Ireland_P,Ireland_Persons,P09,P09,Persons
+P1317,Italy_M,Italy_Males,P09,P09,Males
+P1318,Italy_F,Italy_Females,P09,P09,Females
+P1319,Italy_P,Italy_Persons,P09,P09,Persons
+P1320,Japan_M,Japan_Males,P09,P09,Males
+P1321,Japan_F,Japan_Females,P09,P09,Females
+P1322,Japan_P,Japan_Persons,P09,P09,Persons
+P1323,Korea_Republic_South_M,Korea_Republic_of_South_Males,P09,P09,Males
+P1324,Korea_Republic_South_F,Korea_Republic_of_South_Females,P09,P09,Females
+P1325,Korea_Republic_South_P,Korea_Republic_of_South_Persons,P09,P09,Persons
+P1326,Lebanon_M,Lebanon_Males,P09,P09,Males
+P1327,Lebanon_F,Lebanon_Females,P09,P09,Females
+P1328,Lebanon_P,Lebanon_Persons,P09,P09,Persons
+P1329,Malaysia_M,Malaysias_Males,P09,P09,Males
+P1330,Malaysia_F,Malaysia_Females,P09,P09,Females
+P1331,Malaysia_P,Malaysia_Persons,P09,P09,Persons
+P1332,Nepal_M,Nepal_Males,P09,P09,Males
+P1333,Nepal_F,Nepal_Females,P09,P09,Females
+P1334,Nepal_P,Nepal_Persons,P09,P09,Persons
+P1335,Netherlands_M,Netherlands_Males,P09,P09,Males
+P1336,Netherlands_F,Netherlands_Females,P09,P09,Females
+P1337,Netherlands_P,Netherlands_Persons,P09,P09,Persons
+P1338,New_Zealand_M,New_Zealand_Males,P09,P09,Males
+P1339,New_Zealand_F,New_Zealand_Females,P09,P09,Females
+P1340,New_Zealand_P,New_Zealand_Persons,P09,P09,Persons
+P1341,Pakistan_M,Pakistan_Males,P09,P09,Males
+P1342,Pakistan_F,Pakistan_Females,P09,P09,Females
+P1343,Pakistan_P,Pakistan_Persons,P09,P09,Persons
+P1344,Philippines_M,Philippines_Males,P09,P09,Males
+P1345,Philippines_F,Philippines_Females,P09,P09,Females
+P1346,Philippines_P,Philippines_Persons,P09,P09,Persons
+P1347,Poland_M,Poland_Males,P09,P09,Males
+P1348,Poland_F,Poland_Females,P09,P09,Females
+P1349,Poland_P,Poland_Persons,P09,P09,Persons
+P1350,Singapore_M,Singapore_Males,P09,P09,Males
+P1351,Singapore_F,Singapore_Females,P09,P09,Females
+P1352,Singapore_P,Singapore_Persons,P09,P09,Persons
+P1353,South_Africa_M,South_Africa_Males,P09,P09,Males
+P1354,South_Africa_F,South_Africa_Females,P09,P09,Females
+P1355,South_Africad_P,South_Africa_Persons,P09,P09,Persons
+P1356,Sri_Lanka_M,Sri_Lanka_Males,P09,P09,Males
+P1357,Sri_Lanka_F,Sri_Lanka_Females,P09,P09,Females
+P1358,Sri_Lanka_P,Sri_Lanka_Persons,P09,P09,Persons
+P1359,Taiwan_M,Taiwan_Males,P09,P09,Males
+P1360,Taiwan_F,Taiwan_Females,P09,P09,Females
+P1361,Taiwan_P,Taiwan_Persons,P09,P09,Persons
+P1362,Thailand_M,Thailand_Males,P09,P09,Males
+P1363,Thailand_F,Thailand_Females,P09,P09,Females
+P1364,Thailand_P,Thailand_Persons,P09,P09,Persons
+P1365,United_Kingdom_CI_IM_M,United_Kingdom_Channel_Islands_and_Isle_of_Man_Males,P09,P09,Males
+P1366,United_Kingdom_CI_IM_F,United_Kingdom_Channel_Islands_and_Isle_of_Man_Females,P09,P09,Females
+P1367,United_Kingdom_CI_IM_P,United_Kingdom_Channel_Islands_and_Isle_of_Man_Persons,P09,P09,Persons
+P1368,United_States_America_M,United_States_of_America_Males,P09,P09,Males
+P1369,United_States_America_F,United_States_of_America_Females,P09,P09,Females
+P1370,United_States_America_P,United_States_of_America_Persons,P09,P09,Persons
+P1371,Vietnam_M,Vietnam_Males,P09,P09,Males
+P1372,Vietnam_F,Vietnam_Females,P09,P09,Females
+P1373,Vietnam_P,Vietnam_Persons,P09,P09,Persons
+P1374,Born_elsewhere_M,Born_elsewhere_Males,P09,P09,Males
+P1375,Born_elsewhere_F,Born_elsewhere_Females,P09,P09,Females
+P1376,Born_elsewhere_P,Born_elsewhere_Persons,P09,P09,Persons
+P1377,Country_birth_not_stated_M,Country_of_birth_not_stated_Males,P09,P09,Males
+P1378,Country_birth_not_stated_F,Country_of_birth_not_stated_Females,P09,P09,Females
+P1379,Country_birth_not_stated_P,Country_of_birth_not_stated_Persons,P09,P09,Persons
+P1380,OS_visitors_M,Overseas_visitors_Males,P09,P09,Males
+P1381,OS_visitors_F,Overseas_visitors_Females,P09,P09,Females
+P1382,OS_visitors_P,Overseas_visitors_Persons,P09,P09,Persons
+P1383,Tot_M,Total_Males,P09,P09,Males
+P1384,Tot_F,Total_Females,P09,P09,Females
+P1385,Tot_P,Total_Persons,P09,P09,Persons

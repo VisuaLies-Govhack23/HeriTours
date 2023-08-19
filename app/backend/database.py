@@ -1,5 +1,7 @@
 import sqlite3
 
+from .models import AnswerData, QuestionData, StoryData
+
 conn = sqlite3.connect("heritage.db")
 
 
@@ -37,7 +39,7 @@ def get_stories(siteid):
         """,
         [siteid],
     ).fetchall()
-    return [{"userId": row[0], "vote": row[1], "story": row[2]} for row in rows]
+    return [StoryData(vote=row[1], story=row[2]) for row in rows]
 
 
 def add_story(siteid, userid, story):
@@ -102,30 +104,36 @@ def get_story(siteid, userid):
         [siteid, userid],
     ).fetchone()
     if row is None:
-        return {"vote": None, "story": None}
+        return StoryData(vote=None, story=None)
 
-    return {"vote": row[0], "story": row[1]}
+    return StoryData(vote=row[0], story=row[1])
 
 
 def get_questions(siteid):
     return [
-        {
-            "id": "q1",
-            "question": "Was there any graffiti?",
-            "answers": [{"id": "yes", "answer": "Yes"}, {"id": "no", "answer": "No"}],
-        },
-        {
-            "id": "q2",
-            "question": "How busy was the site today?",
-            "answers": [
-                {"id": "none", "answer": "Empty - Just me"},
-                {"id": "low", "answer": "Fewer than 5 other groups"},
-                {"id": "high", "answer": "5 or more other groups"},
+        QuestionData(
+            id="q1",
+            question="Was there any graffiti?",
+            answers=[
+                AnswerData(id="yes", answer="Yes"),
+                AnswerData(id="no", answer="No"),
             ],
-        },
-        {
-            "id": "q3",
-            "question": "Was there available parking?",
-            "answers": [{"id": "yes", "answer": "Yes"}, {"id": "no", "answer": "No"}],
-        },
+        ),
+        QuestionData(
+            id="q2",
+            question="How busy was the site today?",
+            answers=[
+                AnswerData(id="none", answer="Empty - Just me"),
+                AnswerData(id="low", answer="Fewer than 5 other groups"),
+                AnswerData(id="high", answer="5 or more other groups"),
+            ],
+        ),
+        QuestionData(
+            id="q3",
+            question="Was there available parking?",
+            answers=[
+                AnswerData(id="yes", answer="Yes"),
+                AnswerData(id="no", answer="No"),
+            ],
+        ),
     ]

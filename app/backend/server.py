@@ -1,11 +1,12 @@
 import os
 
 from fastapi import FastAPI, Request
-from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, Response
 from fastapi.staticfiles import StaticFiles
 
 from . import database as db
 from .generate_id import make_userid
+from .models import SiteInfoData
 
 Server = FastAPI()
 
@@ -47,13 +48,11 @@ async def site_info(request: Request, siteid: str):
     answered = db.get_answered_questions(siteid, userid)
     stories = db.get_stories(siteid)
     questions = db.get_questions(siteid)
-    return JSONResponse(
-        {
-            "stories": stories,
-            "answered": answered,
-            "questions": questions,
-            "story": story,
-        }
+    return Response(
+        SiteInfoData(
+            stories=stories, answered=answered, questions=questions, story=story
+        ).model_dump_json(),
+        headers={"content-type": "application/json"},
     )
 
 

@@ -63,6 +63,11 @@ const Button = styled.button`
     }
 `;
 
+const Scrollable = styled.div`
+    overflow-y: scroll;
+    flex: 1;
+`;
+
 export interface StoryProps {
     story: StoryData;
 }
@@ -122,7 +127,7 @@ const Citizen: React.FC<CitizenProps> = ({ siteId }) => {
     }
 
     return (
-        <div ref={parent}>
+        <Scrollable ref={parent}>
             <Header>Your Vote</Header>
             <Vote value={info.story.vote ?? 0} onChange={doVote} />
             <Header>Help Us and Earn Points</Header>
@@ -148,7 +153,7 @@ const Citizen: React.FC<CitizenProps> = ({ siteId }) => {
             {info.stories.map((story, index) => (
                 <Story key={index} story={story} />
             ))}
-        </div>
+        </Scrollable>
     );
 };
 
