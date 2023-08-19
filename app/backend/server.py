@@ -91,10 +91,13 @@ async def answer(request: Request, siteid: str, questionid: str, answerid: str):
     return JSONResponse({"status": True})
 
 
-@Server.get("/nearest/{lat}/{lon}")
-async def nearest(lat: float, lon: float):
-    print("requesting nearest to", lat, lon)
-    return JSONResponse({"info": "Test", "id": 123})
+@Server.get("/nearest/{lat}/{lng}")
+async def nearest(lat: float, lng: float):
+    print("requesting nearest to", lat, lng)
+    nearest = db.get_nearest(lat, lng)
+    return Response(
+        nearest.model_dump_json(), headers={"content-type": "application/json"}
+    )
 
 
 @Server.get("/tour/{query}")

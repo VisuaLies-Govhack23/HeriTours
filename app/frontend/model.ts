@@ -1,6 +1,6 @@
 import { LatLngTuple } from 'leaflet';
 import { create } from 'zustand';
-import { SiteInfoData } from './types';
+import { ItemData, SiteInfoData } from './types';
 
 export enum Page {
     home = 'home',
@@ -15,13 +15,17 @@ interface AppState {
     tour: string;
     positionLatLng: LatLngTuple | null;
     loaders: number[];
+    nearest: ItemData | null;
+    nearestVersion: number;
 }
 
 export const useAppStore = create<AppState>(() => ({
     page: Page.home,
     tour: 'Tour',
     positionLatLng: null,
-    loaders: []
+    loaders: [],
+    nearest: null,
+    nearestVersion: 0
 }));
 
 export const home = () => {
@@ -40,11 +44,24 @@ export const search = (query: string) => {
 
 export const initGeolocation = () => {
     if ('geolocation' in navigator) {
-        navigator.geolocation.watchPosition(position => {
+        navigator.geolocation.watchPosition(async position => {
             console.log('position is', position);
             const lat = position.coords.latitude;
             const lng = position.coords.longitude;
-            useAppStore.setState(state => ({ ...state, positionLatLng: [lat, lng] }));
+            const oldPos = useAppStore.getState().positionLatLng;
+            if (oldPos === null || lat !== oldPos[0] || lng !== oldPos[1]) {
+                const newPos: LatLngTuple = [lat, lng];
+                useAppStore.setState(state => ({ ...state, positionLatLng: newPos }));
+                const request = idGenerator++;
+                const best = await getNearest(lat, lng);
+                console.log('nearest', best);
+                // Only update the state if there hasn't been a more recent request
+                useAppStore.setState(state =>
+                    state.nearestVersion < request && state.nearest?.id !== best.id
+                        ? { ...state, nearest: best, nearestVersion: request }
+                        : state
+                );
+            }
         });
     }
 };
@@ -79,6 +96,13 @@ export const sendAnswer = async (siteId: string, questionId: string, answerId: s
         credentials: 'include',
         method: 'POST'
     });
+};
+
+export const getNearest = async (lat: number, lng: number): Promise<ItemData> => {
+    // No need to show a loader during this operation
+    const result = await fetch(`/nearest/${lat}/${lng}`, { credentials: 'include' });
+    const json = (await result.json()) as ItemData;
+    return json;
 };
 
 export const sendStory = async (siteId: string, story: string): Promise<void> => {

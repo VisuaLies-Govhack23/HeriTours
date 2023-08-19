@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { search } from '../model';
+import { search, useAppStore } from '../model';
 import Logo from './Logo';
 import Search from './Search';
 import Spinner from './Spinner';
@@ -32,6 +32,8 @@ const Header = styled.h2`
 export interface HomeProps {}
 
 const Home: React.FC<HomeProps> = ({}) => {
+    const nearby = useAppStore(state => state.nearest);
+
     const doSearch = (query: string) => {
         search(query);
     };
@@ -44,6 +46,7 @@ const Home: React.FC<HomeProps> = ({}) => {
             <Search onSearch={doSearch} />
             <Header>Or choose from a popular search:</Header>
             <Column>
+                <Tour name="Local Surprises" subtitle={nearby?.name && `Near you: ${nearby.name}`} />
                 <Tour name="Victorian Architecture" />
                 <Tour name="Georgian Architecture" />
                 <Tour name="First Nations" />

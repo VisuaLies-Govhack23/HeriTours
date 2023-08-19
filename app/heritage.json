@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "Harbour Bridge",
+        "address": "123 Street",
+        "latlng": [-33.852, 151.21],
+        "data": { "key": "value" },
+        "suburb": "Sydney"
+    },
+    {
+        "id": 2,
+        "name": "Taronga Zoo",
+        "address": "124 Street",
+        "latlng": [-33.843, 151.241],
+        "data": { "key": "value2" },
+        "suburb": "Sydney"
+    }
+]

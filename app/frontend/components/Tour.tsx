@@ -9,12 +9,22 @@ const Card = styled.div`
     margin-bottom: 1rem;
 `;
 
+const Subtitle = styled.div`
+    font-size: 0.8rem;
+`;
+
 export interface TourProps {
     name: string;
+    subtitle?: string | null;
 }
 
-const Tour: React.FC<TourProps> = ({ name }) => {
-    return <Card>{name}</Card>;
+const Tour: React.FC<TourProps> = ({ name, subtitle }) => {
+    return (
+        <Card>
+            {name}
+            {subtitle && <Subtitle>{subtitle}</Subtitle>}
+        </Card>
+    );
 };
 
 export default Tour;

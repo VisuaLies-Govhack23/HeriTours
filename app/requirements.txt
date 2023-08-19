@@ -1,5 +1,6 @@
 black
 fastapi
+haversine
 isort
 pydantic
 pyright

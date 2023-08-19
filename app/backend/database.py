@@ -1,8 +1,14 @@
+import json
+import math
 import sqlite3
 
-from .models import AnswerData, QuestionData, StoryData
+from haversine import haversine
+
+from .models import AnswerData, ItemData, QuestionData, StoryData
 
 conn = sqlite3.connect("heritage.db")
+
+heritage_items: list[ItemData] = []
 
 
 def init_database():
@@ -29,6 +35,11 @@ def init_database():
             )
         """
     )
+
+    with open("heritage.json", "r") as f:
+        raw = f.read()
+    for item in json.loads(raw):
+        heritage_items.append(ItemData.model_validate(item))
 
 
 def get_stories(siteid):
@@ -137,3 +148,15 @@ def get_questions(siteid):
             ],
         ),
     ]
+
+
+def get_nearest(lat, lng):
+    # This could be rewritten to use a Numpy matrix to be a lot faster
+    best = heritage_items[0]
+    best_distance = math.inf
+    for item in heritage_items:
+        distance = haversine((lat, lng), item.latlng)
+        if distance < best_distance:
+            best = item
+            best_distance = distance
+    return best
