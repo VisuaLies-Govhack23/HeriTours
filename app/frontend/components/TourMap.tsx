@@ -63,7 +63,7 @@ export interface MapProps {}
 
 const TourMap: React.FC<MapProps> = ({}) => {
     const [isShowingDetails, setShowingDetails] = useState(false);
-    const tourName = useAppStore(state => state.tour);
+    const tourName = useAppStore(state => state.tourName);
     const route = useAppStore(state => state.route);
     const currentLocation = useAppStore(state => state.positionLatLng);
 

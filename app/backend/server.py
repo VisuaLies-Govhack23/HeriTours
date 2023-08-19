@@ -111,6 +111,11 @@ async def tour(lat: float, lng: float, query: str):
     )
 
 
+@Server.get("/tour/{lat}/{lng}")
+async def local_tour(lat: float, lng: float):
+    return await tour(lat, lng, "")
+
+
 @Server.get("/api/ping")
 async def ping():
     return JSONResponse({"pong": True})

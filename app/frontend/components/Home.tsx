@@ -35,7 +35,11 @@ const Home: React.FC<HomeProps> = ({}) => {
     const nearby = useAppStore(state => state.nearest);
 
     const doSearch = (query: string) => {
-        void search(query);
+        void search(query, query);
+    };
+
+    const makeSearch = (query: string, title: string) => {
+        return () => search(query, title);
     };
 
     return (
@@ -46,16 +50,23 @@ const Home: React.FC<HomeProps> = ({}) => {
             <Search onSearch={doSearch} />
             <Header>Or choose from a popular search:</Header>
             <Column>
-                <Tour name="Local Surprises" subtitle={nearby?.name && `Near you: ${nearby.name}`} />
-                <Tour name="Victorian Architecture" />
-                <Tour name="Georgian Architecture" />
-                <Tour name="First Nations" />
-                <Tour name="LGBTQIA+ History" />
-                <Tour name="Modernist" />
-                <Tour name="Brutalist" />
-                <Tour name="Federation" />
-                <Tour name="Trade and Commerce" />
-                <Tour name="Governor Macquarie" />
+                <Tour
+                    name="Local Surprises"
+                    subtitle={nearby?.name && `Near you: ${nearby.name}`}
+                    onClick={makeSearch('', 'Local Surprises Tour')}
+                />
+                <Tour name="Victorian Architecture" onClick={makeSearch('victorian', 'Victorian Architecture')} />
+                <Tour name="Georgian Architecture" onClick={makeSearch('georgian', 'Georgian Architecture')} />
+                <Tour name="Indigenous History" onClick={makeSearch('aboriginal', 'Indigenous History')} />
+                <Tour name="LGBTQIA+ History" onClick={makeSearch('homosexual', 'LGBTQIA+ History')} />
+                <Tour name="Mid-Century Modern" onClick={makeSearch('mid-century modern', 'Mid-Century Modern Tour')} />
+                <Tour name="Brutalist Architecture" onClick={makeSearch('brutalist', 'Brutalist Architecture')} />
+                <Tour
+                    name="Federation Architecture"
+                    onClick={makeSearch('federation-style', 'Federation Architecture')}
+                />
+                <Tour name="Trade and Commerce" onClick={makeSearch('trade', 'Trade and Commerce')} />
+                <Tour name="Governor Macquarie" onClick={makeSearch('governor macquarie', 'Governor Macquarie')} />
             </Column>
         </ScreenColumn>
     );

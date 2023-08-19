@@ -13,7 +13,7 @@ let idGenerator = 1;
 
 interface AppState {
     page: Page;
-    tour: string;
+    tourName: string;
     positionLatLng: LatLngTuple | null;
     loaders: number[];
     nearest: ItemData | null;
@@ -23,7 +23,7 @@ interface AppState {
 
 export const useAppStore = create<AppState>(() => ({
     page: Page.home,
-    tour: 'Tour',
+    tourName: 'Tour',
     positionLatLng: null,
     loaders: [],
     nearest: null,
@@ -35,13 +35,13 @@ export const home = () => {
     useAppStore.setState(state => ({ ...state, page: Page.home }));
 };
 
-export const search = async (query: string): Promise<RouteData> => {
+export const search = async (query: string, title?: string): Promise<RouteData> => {
     console.log('search for', query);
     const words = query.split(' ');
     const capitalized = words.map(word =>
         word.match(/^[a-z]/) ? `${word.charAt(0).toUpperCase()}${word.substring(1)}` : word
     );
-    const title = capitalized.join(' ');
+    const tourName = title ?? capitalized.join(' ');
     const id = idGenerator++;
     try {
         useAppStore.setState(state => ({ ...state, loaders: [...state.loaders, id] }));
@@ -52,7 +52,7 @@ export const search = async (query: string): Promise<RouteData> => {
         });
         const json = (await result.json()) as RouteData;
 
-        useAppStore.setState(state => ({ ...state, page: Page.map, tour: title, route: json.stops }));
+        useAppStore.setState(state => ({ ...state, page: Page.map, tourName: tourName, route: json.stops }));
         return json;
     } finally {
         // Remove from queue of pending requests

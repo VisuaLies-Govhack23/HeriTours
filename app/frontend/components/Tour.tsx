@@ -7,6 +7,7 @@ const Card = styled.div`
     border: 1px solid ${lightGrey};
     border-radius: 0.5rem;
     margin-bottom: 1rem;
+    cursor: pointer;
 `;
 
 const Subtitle = styled.div`
@@ -16,11 +17,12 @@ const Subtitle = styled.div`
 export interface TourProps {
     name: string;
     subtitle?: string | null;
+    onClick(): void;
 }
 
-const Tour: React.FC<TourProps> = ({ name, subtitle }) => {
+const Tour: React.FC<TourProps> = ({ name, subtitle, onClick }) => {
     return (
-        <Card>
+        <Card onClick={onClick}>
             {name}
             {subtitle && <Subtitle>{subtitle}</Subtitle>}
         </Card>
