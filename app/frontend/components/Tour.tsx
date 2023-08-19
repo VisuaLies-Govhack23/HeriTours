@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { lightGrey } from 'frontend/constants';
+import { lightGrey } from '../constants';
 
 const Card = styled.div`
     padding: 1rem;

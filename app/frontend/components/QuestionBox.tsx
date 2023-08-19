@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import confetti from 'canvas-confetti';
+import { darkGrey, light, primary } from '../constants';
+import { QuestionData } from '../types';
 
 const Question = styled.div`
     display: flex;
@@ -14,15 +16,53 @@ const Text = styled.div`
 
 const Row = styled.div`
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
+    margin: 1rem;
 `;
 
-const Answer = styled.button``;
+const Answer = styled.button`
+    background-color: ${primary};
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0.25rem 0.25rem;
+    min-width: 5rem;
+    text-align: center;
+    font-weight: 900;
+    color: ${light};
+    &:hover {
+        background-color: ${darkGrey};
+    }
+`;
 
-export interface QuestionBoxProps {}
+export interface QuestionBoxProps {
+    questions: QuestionData[];
+    answered: string[];
+    onAnswer(questionId: string, answerId: string): void;
+}
 
-const QuestionBox: React.FC<QuestionBoxProps> = ({}) => {
-    const doSubmit = () => {
+let idGenerator = 0;
+
+const QuestionBox: React.FC<QuestionBoxProps> = ({ questions, answered, onAnswer }) => {
+    const [skipped, setSkipped] = useState<string[]>([]);
+    const nextQuestion = questions.find(question => !answered.includes(question.id) && !skipped.includes(question.id));
+
+    if (!nextQuestion) {
+        return (
+            <Question>
+                <Text>You've answered all our questions. Thanks!</Text>
+            </Question>
+        );
+    }
+
+    const doSubmit = (questionId: string, answerId: string) => {
+        onAnswer(questionId, answerId);
+
+        // Skip the question locally so the user doesn't need to wait for the server
+        setSkipped([...skipped, questionId]);
+
         void confetti({
             particleCount: 100,
             spread: 70,
@@ -30,13 +70,22 @@ const QuestionBox: React.FC<QuestionBoxProps> = ({}) => {
         });
     };
 
+    const doSkip = (questionId: string) => {
+        setSkipped([...skipped, questionId]);
+    };
+
     return (
         <Question>
-            <Text>Is there a car here?</Text>
+            <Text>{nextQuestion.question}</Text>
             <Row>
-                <Answer onClick={doSubmit}>Yes</Answer>
-                <Answer onClick={doSubmit}>No</Answer>
-                <Answer onClick={doSubmit}>Not Sure</Answer>
+                {nextQuestion.answers.map(answer => (
+                    <Answer key={idGenerator++} onClick={() => doSubmit(nextQuestion.id, answer.id)}>
+                        {answer.answer}
+                    </Answer>
+                ))}
+                <Answer key={idGenerator++} onClick={() => doSkip(nextQuestion.id)}>
+                    Skip
+                </Answer>
             </Row>
         </Question>
     );

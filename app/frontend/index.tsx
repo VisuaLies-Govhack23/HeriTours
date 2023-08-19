@@ -5,11 +5,7 @@ import { initGeolocation } from './model';
 
 const app = document.getElementById('app');
 if (app) {
-    createRoot(app).render(
-        <React.StrictMode>
-            <App />
-        </React.StrictMode>
-    );
+    createRoot(app).render(<App />);
     initGeolocation();
 } else {
     console.error('Cannot start app.');

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import { dark, darkGrey, light, primary } from 'frontend/constants';
 import { MdSearch } from 'react-icons/md';
+import { dark, darkGrey, light, primary } from '../constants';
 
 const Row = styled.div`
     display: flex;

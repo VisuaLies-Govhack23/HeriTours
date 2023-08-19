@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import { light, primary } from 'frontend/constants';
 import { MdClose } from 'react-icons/md';
+import { light, primary } from '../constants';
 import Citizen from './Citizen';
 
 const ScreenColumn = styled.div`
@@ -97,7 +97,7 @@ const Details: React.FC<DetailsProps> = ({ onClose }) => {
             body = <Frame src="/dashboard/demo" />;
             break;
         case Tabs.citizen:
-            body = <Citizen />;
+            body = <Citizen siteId="todo" />;
             break;
         case Tabs.checkin:
             body = <div>Check in</div>;
@@ -110,7 +110,7 @@ const Details: React.FC<DetailsProps> = ({ onClose }) => {
                 <TabItem onClick={() => setTab(Tabs.about)}>About</TabItem>
                 <TabItem onClick={() => setTab(Tabs.insights)}>Local Insights</TabItem>
                 <TabItem onClick={() => setTab(Tabs.citizen)}>Your Stories</TabItem>
-                <TabItem onClick={() => setTab(Tabs.checkin)}>Check In</TabItem>
+                {/* <TabItem onClick={() => setTab(Tabs.checkin)}>Check In</TabItem> */}
                 <CloseButton onClick={onClose}>
                     <MdClose />
                 </CloseButton>

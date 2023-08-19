@@ -38,14 +38,27 @@ async def dashboard(dashboard_id: str):
     )
 
 
-@Server.get("/stories/{siteid}")
-async def stories(siteid: str):
-    print("requesting stories for", siteid)
+@Server.get("/site/{siteid}")
+async def site_info(request: Request, siteid: str):
+    userid = request.cookies.get("userid", None)
+    if userid is None:
+        return JSONResponse({"error": "no_login"})
+
+    story = db.get_story(siteid, userid)
+    answered = db.get_answered_questions(siteid, userid)
     stories = db.get_stories(siteid)
-    return JSONResponse({"stories": stories})
+    questions = db.get_questions(siteid)
+    return JSONResponse(
+        {
+            "stories": stories,
+            "answered": answered,
+            "questions": questions,
+            "story": story,
+        }
+    )
 
 
-@Server.post("/stories/{siteid}")
+@Server.post("/story/{siteid}")
 async def add_story(request: Request, siteid: str):
     userid = request.cookies.get("userid", None)
     body = await request.body()
@@ -66,6 +79,17 @@ async def vote(request: Request, siteid: str, vote: int):
 
     print("voting", userid, siteid, vote)
     db.add_vote(siteid, userid, vote)
+    return JSONResponse({"status": True})
+
+
+@Server.post("/answer/{siteid}/{questionid}/{answerid}")
+async def answer(request: Request, siteid: str, questionid: str, answerid: str):
+    userid = request.cookies.get("userid", None)
+    if userid is None:
+        return JSONResponse({"error": "no_login"})
+
+    print("answering", userid, siteid, questionid, answerid)
+    db.add_answer(siteid, userid, questionid, answerid)
     return JSONResponse({"status": True})
 
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import { dark, darkGrey, primary } from 'frontend/constants';
 import { MdStar, MdStarOutline } from 'react-icons/md';
+import { dark, darkGrey, primary } from '../constants';
 
 const VoteBox = styled.div`
     display: flex;
@@ -40,7 +40,7 @@ export interface VoteProps {
 }
 
 const Vote: React.FC<VoteProps> = ({ value, onChange }) => {
-    const [override, setOverride] = useState(0);
+    const [override, setOverride] = useState(-1);
 
     const makeEnter = (value: number) => {
         return () => setOverride(value);

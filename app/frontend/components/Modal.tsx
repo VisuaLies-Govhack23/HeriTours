@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { dark, light } from 'frontend/constants';
+import { dark, light } from '../constants';
 
 const OverlayContainer = styled.div`
     height: 100vh;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { light, primary } from 'frontend/constants';
 import { LuCompass } from 'react-icons/lu';
+import { light, primary } from '../constants';
 
 const LogoBox = styled.div`
     display: flex;

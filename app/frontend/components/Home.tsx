@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { search } from 'frontend/model';
+import { search } from '../model';
 import Logo from './Logo';
 import Search from './Search';
 import Spinner from './Spinner';

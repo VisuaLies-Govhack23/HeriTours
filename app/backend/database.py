@@ -22,8 +22,8 @@ def init_database():
                 siteid text,
                 userid text,
                 questionid text,
-                answer text,
-                primary key (siteid, userid)
+                answerid text,
+                primary key (siteid, userid, questionid)
             )
         """
     )
@@ -32,11 +32,12 @@ def init_database():
 def get_stories(siteid):
     rows = conn.execute(
         """
-            select userid, vote, story from user_stories where siteid = ?
+            select userid, vote, story from user_stories 
+            where siteid = ? and story is not null
         """,
         [siteid],
     ).fetchall()
-    return rows
+    return [{"userId": row[0], "vote": row[1], "story": row[2]} for row in rows]
 
 
 def add_story(siteid, userid, story):
@@ -73,6 +74,16 @@ def add_vote(siteid, userid, vote):
         )
 
 
+def add_answer(siteid, userid, questionid, answerid):
+    # Duplicate answers can be safely ignored
+    conn.execute(
+        """
+                insert into user_questions (siteid, userid, questionid, answerid) values (?, ?, ?, ?)
+            """,
+        [siteid, userid, questionid, answerid],
+    ).fetchone()
+
+
 def get_answered_questions(siteid, userid):
     rows = conn.execute(
         """
@@ -81,3 +92,40 @@ def get_answered_questions(siteid, userid):
         [siteid, userid],
     ).fetchall()
     return [row[0] for row in rows]
+
+
+def get_story(siteid, userid):
+    row = conn.execute(
+        """
+            select vote, story from user_stories where siteid = ? and userid = ?
+        """,
+        [siteid, userid],
+    ).fetchone()
+    if row is None:
+        return {"vote": None, "story": None}
+
+    return {"vote": row[0], "story": row[1]}
+
+
+def get_questions(siteid):
+    return [
+        {
+            "id": "q1",
+            "question": "Was there any recent graffiti?",
+            "answers": [{"id": "yes", "answer": "Yes"}, {"id": "no", "answer": "No"}],
+        },
+        {
+            "id": "q2",
+            "question": "How busy was the site today?",
+            "answers": [
+                {"id": "none", "answer": "Empty - Just me"},
+                {"id": "low", "answer": "Fewer than 5 other groups"},
+                {"id": "high", "answer": "5 or more other groups"},
+            ],
+        },
+        {
+            "id": "q3",
+            "question": "Was there available parking?",
+            "answers": [{"id": "yes", "answer": "Yes"}, {"id": "no", "answer": "No"}],
+        },
+    ]

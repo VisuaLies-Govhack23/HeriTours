@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import { light, primary } from 'frontend/constants';
-import { home, useAppStore } from 'frontend/model';
 import { LatLngTuple } from 'leaflet';
 import { MdClose } from 'react-icons/md';
 import { CircleMarker, MapContainer, Marker, Polyline, TileLayer, Tooltip } from 'react-leaflet';
+import { light, primary } from '../constants';
+import { home, useAppStore } from '../model';
 import Details from './Details';
 import { Modal } from './Modal';
 import Spinner from './Spinner';
