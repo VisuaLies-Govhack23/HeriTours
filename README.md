@@ -30,6 +30,7 @@ Note that this project has not been audited for security. Please use at your own
 - Leaflet for map visualizations.
 - HTML5 Geolocation API for live position updates
 - Fetch API for requests
+- Fetch insights from a dashboard hosted on Tableau public, a free platform
 
 *Back-end:*
 - A Python-based server written using FastAPI and Pydantic
@@ -43,8 +44,9 @@ Note that this project has not been audited for security. Please use at your own
 - Clues generated using free credits on OpenAI
 
 *Data:*
-- Census
+- 2021 ABS Census
 - NSW State Heritage Register Centroids
-- NSW State Heritage Inventory 
+- NSW State Heritage Inventory
+- Historic Heritage Information Management System (HHIMS)
 
 
