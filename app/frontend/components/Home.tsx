@@ -29,9 +29,9 @@ const Header = styled.h2`
     margin: 1rem 0 0.5rem 0;
 `;
 
-export interface HomeProps { }
+export interface HomeProps {}
 
-const Home: React.FC<HomeProps> = ({ }) => {
+const Home: React.FC<HomeProps> = ({}) => {
     const nearby = useAppStore(state => state.nearest);
 
     const doSearch = (query: string) => {
