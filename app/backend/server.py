@@ -30,11 +30,14 @@ async def index(request: Request):
     return response
 
 
-@Server.get("/dashboard/{dashboard_id}")
-async def dashboard(dashboard_id: str):
+@Server.get("/dashboard/{siteid}")
+async def dashboard(siteid: int):
     with open(os.path.join(DASHBOARD_ROOT, "dashboard.html")) as f:
         body = f.read()
-    body = body.replace("Sydney", dashboard_id)
+    suburb = db.get_site_info(siteid)
+    if suburb is None:
+        suburb = "Sydney"
+    body = body.replace("Sydney", suburb)
     return HTMLResponse(body)
 
 

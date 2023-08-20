@@ -106,7 +106,7 @@ const Details: React.FC<DetailsProps> = ({ onClose, item }) => {
             );
             break;
         case Tabs.insights:
-            body = <Frame src={`/dashboard/demo`} />;
+            body = <Frame src={`/dashboard/${item.id}`} />;
             break;
         case Tabs.citizen:
             body = <Citizen siteId="todo" />;

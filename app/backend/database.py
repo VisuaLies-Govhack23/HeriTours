@@ -228,3 +228,9 @@ def get_tour(lat, lng, query, max_size=10) -> list[ItemData]:
         result.append(shortlist[route[i + 1]])
 
     return result
+
+
+def get_site_info(siteid):
+    if siteid < 0 or siteid >= len(heritage_items):
+        return None
+    return heritage_items[siteid]
