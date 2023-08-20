@@ -5,4 +5,5 @@ isort
 pydantic
 pyright
 python-dotenv
+scikit-learn
 uvicorn[standard]

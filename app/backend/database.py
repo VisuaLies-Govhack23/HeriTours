@@ -4,6 +4,7 @@ import sqlite3
 
 from haversine import haversine
 
+from .full_text import init_fulltext, query_all
 from .models import AnswerData, ItemData, QuestionData, StoryData
 from .shortest_path import find_shortest_path
 
@@ -41,6 +42,8 @@ def init_database():
         raw = f.read()
     for item in json.loads(raw):
         heritage_items.append(ItemData.model_validate(item))
+
+    init_fulltext(heritage_items)
 
 
 def get_stories(siteid):
@@ -168,12 +171,21 @@ def get_tour(lat, lng, query, max_size=10) -> list[ItemData]:
     weights = []
 
     # Compute weights
-    # TODO include query in weights calculation
-    print("ignoring query", query)
+
+    query_weights = [1] * len(heritage_items)
+    if len(query.strip()) > 0:
+        query_weights = query_all(query)
+
     for index, item in enumerate(heritage_items):
-        weight = haversine(user, item.latlng)
-        weights.append((weight, index))
+        distance = haversine(user, item.latlng)
+        query_weight = query_weights[index]
+        if query_weight > 0:
+            weight = math.sqrt(distance) + (1 - query_weight) * 7
+            weights.append((weight, index))
     weights.sort()
+    if len(weights) > 0:
+        print("min weight", weights[0])
+        print("max weight", weights[-1])
 
     # Get the closest candidates
     topn = min(len(weights), max_size)
@@ -181,6 +193,9 @@ def get_tour(lat, lng, query, max_size=10) -> list[ItemData]:
     for _, index in weights[:topn]:
         shortlist.append(heritage_items[index])
     shortlist.append(None)
+
+    if len(shortlist) < 2:
+        return shortlist
 
     # Compute the cost matrix
     costs = []
@@ -213,3 +228,9 @@ def get_tour(lat, lng, query, max_size=10) -> list[ItemData]:
         result.append(shortlist[route[i + 1]])
 
     return result
+
+
+def get_site_info(siteid):
+    if siteid < 0 or siteid >= len(heritage_items):
+        return None
+    return heritage_items[siteid]

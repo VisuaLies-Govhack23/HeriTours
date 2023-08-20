@@ -35,7 +35,7 @@ const Home: React.FC<HomeProps> = ({}) => {
     const nearby = useAppStore(state => state.nearest);
 
     const doSearch = (query: string) => {
-        void search(query, query);
+        void search(query);
     };
 
     const makeSearch = (query: string, title: string) => {
