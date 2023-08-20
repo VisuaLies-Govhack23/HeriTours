@@ -36,8 +36,10 @@ async def dashboard(siteid: int):
         body = f.read()
     suburb = db.get_site_info(siteid)
     if suburb is None:
-        suburb = "Sydney"
-    body = body.replace("Sydney", suburb)
+        suburb = "SYDNEY"
+    body = body.replace("{SUBURB}", suburb)
+    body = body.replace("SYDNEY", suburb)
+    body = body.replace("WOLLONGONG", suburb)
     return HTMLResponse(body)
 
 

@@ -24,13 +24,13 @@ const Text = styled.div`
     font-weight: 900;
 `;
 
-export interface LogoProps {}
+export interface LogoProps { }
 
-const Logo: React.FC<LogoProps> = ({}) => {
+const Logo: React.FC<LogoProps> = ({ }) => {
     return (
         <LogoBox>
             <LuCompass />
-            <Text>Visual Lives</Text>
+            <Text>HeriTours</Text>
         </LogoBox>
     );
 };
