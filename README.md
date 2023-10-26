@@ -2,7 +2,7 @@
 
 HeriTours is a web-based mobile app for exploring NSW local heritage.
 
-Noting in our demo is fake! Everything you see is real and implemented!
+Nothing in our demo is fake! Everything you see is real and implemented!
 
 ## Screenshots
 
@@ -121,7 +121,7 @@ Future developments to the application aim to improve user experience, through:
 - A chatbot assistant provide rapid responses to questions that users may have
 - Incorporating an end-to-end public transport trip plan so users can enjoy a trip end-to-end using public transport and active travel
 - Allowing users to share photos and videos alongside their stories
-Showcasing upcoming heritage events related to the tour themes
+- Showcasing upcoming heritage events related to the tour themes
 - A system of points and badges to encourage the public and schoolchildren to compete in learning about history
 - Increasingly compelling games, similar to Pokemon Go (e.g., Heritage Go?)
 - Incorporating archival photos from State Library and other sources
